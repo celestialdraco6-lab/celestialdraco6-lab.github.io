@@ -285,7 +285,7 @@
     <div class="container">
         <header>
             <h1>Pragati Pandey</h1>
-            <p class="tagline">Crafting Stories That Connect & Convert</p>
+            <p class="tagline">Crafting Stories That Connect &amp; Convert</p>
             <div class="contact-links">
                 <a href="mailto:celestialdraco6@gmail.com" class="contact-button">Email Me</a>
                 <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener noreferrer" class="contact-button">LinkedIn</a>
@@ -302,9 +302,9 @@
         <section class="section">
             <h2>My Expertise</h2>
             <div class="skills-grid">
-                <!-- Updated SEO skill tile to directly showcase the study.html page with keyword-rich text -->
+                <!-- SEO skill tile highlighting study-focused SEO blog -->
                 <a class="skill-item" href="study.html">
-                    SEO Content Writing
+                    SEO Content Writing &amp; Study Tips Blog Optimization
                 </a>
                 <a class="skill-item" href="blog1.html">Blog &amp; Article Writing</a>
                 <a class="skill-item" href="copywriting.html">Copywriting</a>
@@ -316,25 +316,24 @@
 
         <section class="section">
             <h2>Featured Work</h2>
-
             <div class="portfolio-grid">
+
                 <a class="portfolio-item" href="blog1.html" target="_blank" rel="noopener noreferrer">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Blog Post</span>
                         <h3>The Ultimate Guide to Moisturizers</h3>
                         <p class="portfolio-description">
-                            SEO-optimized skincare guide with product breakdowns, ingredient insights &amp; conversion-focused structure.
+                            A reader-friendly skincare guide that explains ingredients, textures, and routines—designed to answer common queries and support confident, informed purchase decisions.
                         </p>
                     </div>
                 </a>
 
-                <!-- New Featured Work card for study.html -->
                 <a class="portfolio-item" href="study.html" target="_blank" rel="noopener noreferrer">
                     <div class="portfolio-content">
                         <span class="portfolio-category">SEO Blog Article</span>
                         <h3>Study Tips SEO Blog: Focus, Memory &amp; Learning Efficiency</h3>
                         <p class="portfolio-description">
-                            Long-form, keyword-rich study tips article optimized for focus, memory, and learning efficiency—balancing evidence-based advice with clean structure and search-friendly headings to attract organic traffic.
+                            An SEO-optimized, long-form study guide targeting focus, memory, and learning efficiency, combining practical techniques with clear structure to attract and retain students via organic search.
                         </p>
                     </div>
                 </a>
@@ -344,7 +343,7 @@
                         <span class="portfolio-category">Website Copy</span>
                         <h3>OptimizePro SaaS Product Launch</h3>
                         <p class="portfolio-description">
-                            Full website copy with value propositions &amp; conversion-based messaging for a B2B SaaS startup.
+                            Conversion-focused website copy that clearly communicates value, addresses buyer pain points, and guides visitors toward sign-ups and demos with straightforward, benefit-led messaging.
                         </p>
                     </div>
                 </div>
@@ -354,29 +353,27 @@
                         <span class="portfolio-category">Case Study</span>
                         <h3>E-commerce Growth Story</h3>
                         <p class="portfolio-description">
-                            Case study showing 300% traffic growth through targeted SEO &amp; long-form content strategy.
+                            A performance-focused case study outlining how strategic SEO content and category pages helped an online store achieve a 300% increase in organic traffic and stronger buyer intent.
                         </p>
                     </div>
                 </div>
 
-                <!-- UPDATED TECHNICAL WRITING CARD -->
                 <a href="technical.html" class="portfolio-item" target="_blank" rel="noopener noreferrer">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Technical Writing</span>
                         <h3>Best Practices for Writing Clean &amp; Maintainable Code</h3>
                         <p class="portfolio-description">
-                            A clear, structured technical guide simplifying core software development principles for teams, recruiters, and new developers—covering naming conventions, coding standards, refactoring, and version control in an accessible format.
+                            A practical technical guide that breaks down naming conventions, clean code practices, refactoring, and version control for teams who need clear, maintainable documentation and standards.
                         </p>
                     </div>
                 </a>
 
-                <!-- TRANSCRIPTION CARD -->
                 <div class="portfolio-item">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Transcription &amp; Translation</span>
                         <h3>Hindi to English Audio Transcripts</h3>
                         <p class="portfolio-description">
-                            Clean, context-rich English transcripts for conversational Hindi audio—preserving tone, nuance, meaning &amp; clarity.
+                            Explore transcripts that turn Hindi media into accessible, publication-ready English documents. Ideal for use in captions, translations, or cross-language productions.
                         </p>
                     </div>
                 </div>
@@ -386,7 +383,7 @@
                         <span class="portfolio-category">Product Descriptions</span>
                         <h3>Violet Beauty &amp; Fashion</h3>
                         <p class="portfolio-description">
-                            Persuasive product descriptions highlighting features, benefits &amp; brand voice to drive conversions.
+                            Persuasive product descriptions that highlighting features, benefits & brand voice to drive conversions.
                         </p>
                     </div>
                 </div>
@@ -402,14 +399,14 @@
     </div>
 
     <!-- Modal -->
-    <div id="portfolioModal" class="modal">
+    <div id="portfolioModal" class="modal" aria-hidden="true">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 style="margin: 0; color: white;">OptimizePro - SaaS Website Copy</h2>
-                <span class="close" onclick="closeModal()">&times;</span>
+                <button class="close" onclick="closeModal()" aria-label="Close portfolio preview">&times;</button>
             </div>
             <div class="modal-body">
-                <iframe id="portfolioFrame" srcdoc=""></iframe>
+                <iframe id="portfolioFrame" srcdoc="" title="OptimizePro SaaS Copy Preview"></iframe>
             </div>
         </div>
     </div>
@@ -418,20 +415,29 @@
         const saasHTML = `<h1>Demo SaaS Page</h1>`;
 
         function openModal() {
-            document.getElementById('portfolioModal').style.display = 'block';
-            document.getElementById('portfolioFrame').srcdoc = saasHTML;
+            const modal = document.getElementById('portfolioModal');
+            const frame = document.getElementById('portfolioFrame');
+            modal.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+            frame.srcdoc = saasHTML;
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            document.getElementById('portfolioModal').style.display = 'none';
+            const modal = document.getElementById('portfolioModal');
+            const frame = document.getElementById('portfolioFrame');
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            frame.srcdoc = '';
             document.body.style.overflow = 'auto';
         }
 
         window.onclick = function(event) {
             const modal = document.getElementById('portfolioModal');
-            if (event.target == modal) closeModal();
-        }
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
     </script>
 
 </body>
