@@ -1,525 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Content Writer Portfolio - Pragati Pandey</title>
-    <meta name="description" content="Content writer portfolio of Pragati Pandey, specializing in SEO content writing, study tips blogs, technical writing, transcription, and product descriptions that connect and convert." />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 3em;
-            color: #667eea;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .tagline {
-            font-size: 1.3em;
-            color: #666;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .contact-links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .contact-links a {
-            text-decoration: none;
-        }
-
-        .contact-button {
-            display: inline-block;
-            background: #667eea;
-            color: #ffffff;
-            padding: 10px 22px;
-            border-radius: 999px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .contact-button:hover {
-            background: #764ba2;
-            transform: translateY(-2px);
-        }
-
-        .section {
-            background: white;
-            padding: 50px 40px;
-            margin-bottom: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            font-size: 2em;
-            color: #667eea;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        .about-text {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .skill-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-            transition: transform 0.3s;
-            text-decoration: none;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .portfolio-item {
-            background: #f9f9f9;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            text-decoration: none;
-            display: block;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .portfolio-content {
-            padding: 25px;
-        }
-
-        .portfolio-item h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.4em;
-        }
-
-        .portfolio-category {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            margin-bottom: 15px;
-        }
-
-        .portfolio-description {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .cta-section {
-            text-align: center;
-            padding: 60px 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 15px;
-        }
-
-        .cta-section h2 {
-            color: white;
-            border: none;
-            margin-bottom: 20px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 15px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1em;
-            margin-top: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 2% auto;
-            padding: 0;
-            width: 90%;
-            max-width: 1200px;
-            border-radius: 15px;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px 30px;
-            border-radius: 15px 15px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .close {
-            color: white;
-            font-size: 35px;
-            font-weight: bold;
-            cursor: pointer;
-            line-height: 1;
-            background: none;
-            border: none;
-        }
-
-        .close:hover {
-            opacity: 0.7;
-        }
-
-        .modal-body {
-            padding: 30px;
-        }
-
-        .modal-body iframe {
-            width: 100%;
-            height: 600px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-
-        /* Tablet & small laptop adjustments */
-        @media (max-width: 768px) {
-            body {
-                font-size: 0.95rem;
-            }
-
-            .container {
-                padding: 30px 16px;
-            }
-
-            header {
-                padding: 40px 16px;
-                margin-bottom: 30px;
-            }
-
-            h1 {
-                font-size: 2.2em;
-            }
-
-            h2 {
-                font-size: 1.6em;
-            }
-
-            .section {
-                padding: 30px 20px;
-            }
-
-            .cta-section {
-                padding: 40px 20px;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .portfolio-content {
-                padding: 20px;
-            }
-
-            .modal-content {
-                width: 95%;
-                margin: 5% auto;
-            }
-
-            .modal-body iframe {
-                height: 400px;
-            }
-        }
-
-        /* Phone-specific tweaks */
-        @media (max-width: 480px) {
-            header {
-                padding: 30px 14px;
-                border-radius: 16px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            .tagline {
-                font-size: 1.05em;
-            }
-
-            .section {
-                padding: 24px 16px;
-                border-radius: 12px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-
-            .skill-item {
-                padding: 16px 12px;
-                font-size: 0.95rem;
-            }
-
-            .cta-section {
-                padding: 30px 16px;
-                border-radius: 12px;
-            }
-
-            .cta-button {
-                width: 100%;
-                max-width: 260px;
-                padding: 12px 24px;
-                font-size: 1rem;
-            }
-
-            .modal-content {
-                width: 100%;
-                height: 100%;
-                max-width: none;
-                margin: 0;
-                border-radius: 0;
-            }
-
-            .modal-body {
-                padding: 16px;
-            }
-
-            .modal-body iframe {
-                height: 340px;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Pragati Pandey, a professional freelance writer specializing in blog writing, copywriting, technical writing, translation, and more. View writing samples and services.">
+    <meta property="og:title" content="Freelance Writer Portfolio - Pragati Pandey">
+    <meta property="og:description" content="Experienced freelance writer offering blog posts, copywriting, technical documentation, and translation services. Explore the writing portfolio of Pragati Pandey.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://celestialdraco6-lab.github.io/">
+    <title>Professional Freelance Writer Portfolio | Pragati Pandey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="container">
-        <header>
-            <h1>Pragati Pandey</h1>
-            <p class="tagline">Crafting Stories That Connect &amp; Convert</p>
-            <div class="contact-links">
-                <a href="mailto:celestialdraco6@gmail.com" class="contact-button">Email Me</a>
-                <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener noreferrer" class="contact-button">LinkedIn</a>
-            </div>
-        </header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="blog1.html" class="nav-link">Blog Writing</a></li>
+                <li><a href="copywriting.html" class="nav-link">Copywriting</a></li>
+                <li><a href="technical.html" class="nav-link">Technical Writing</a></li>
+                <li><a href="translation.html" class="nav-link">Translation</a></li>
+                <li><a href="study.html" class="nav-link">Case Studies</a></li>
+                <li><a href="products.html" class="nav-link">Product Descriptions</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <section class="section">
-            <h2>About Me</h2>
-            <p class="about-text">
-                I'm a passionate content writer with 5+ years of experience creating compelling narratives that engage audiences and drive results. My expertise spans blog posts, website copy, transcription, and technical writing. I strongly believe in the power of words to educate, inspire, and transform businesses.
-            </p>
-        </section>
-
-        <section class="section">
-            <h2>My Expertise</h2>
-            <div class="skills-grid">
-                <a class="skill-item" href="study.html">
-                    SEO Content Writing
-                </a>
-                <a class="skill-item" href="blog1.html">Blog &amp; Article Writing</a>
-                <a class="skill-item" href="copywriting.html">Copywriting</a>
-                <a class="skill-item" href="translation.html">Hindi to English Transcription</a>
-                <a class="skill-item" href="technical.html">Technical Writing</a>
-                <a class="skill-item" href="products.html">Product Descriptions</a>
-            </div>
-        </section>
-
-        <section class="section">
-    <h2>Featured Work</h2>
-    <div class="portfolio-grid">
-
-        <a class="portfolio-item" href="blog1.html" target="_blank" rel="noopener noreferrer">
-            <div class="portfolio-content">
-                <span class="portfolio-category">Blog Post</span>
-                <h3>The Ultimate Guide to Moisturizers</h3>
-                <p class="portfolio-description">
-                    A reader-friendly skincare guide that explains ingredients, textures, and routines—designed to answer common queries and support confident, informed purchase decisions.
+    <header class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Pragati Pandey</h1>
+                <p class="hero-tagline">Professional Freelance Writer & Content Strategist</p>
+                <p class="hero-intro">
+                    I craft clear, research-backed content that feels human and stays SEO-friendly. From engaging blog posts to persuasive copy and technical documentation, I help brands communicate ideas simply and effectively.
                 </p>
             </div>
-        </a>
-
-        <a class="portfolio-item" href="study.html" target="_blank" rel="noopener noreferrer">
-            <div class="portfolio-content">
-                <span class="portfolio-category">SEO Blog Article</span>
-                <h3>Study Tips SEO Blog: Focus, Memory &amp; Learning Efficiency</h3>
-                <p class="portfolio-description">
-                    An SEO-optimized, long-form study guide targeting focus, memory, and learning efficiency.
-                </p>
-            </div>
-        </a>
-
-        <!-- Removed Copywriting Card Here -->
-
-        <a class="portfolio-item" href="copywriting.html" target="_blank" rel="noopener noreferrer">
-    <div class="portfolio-content">
-        <span class="portfolio-category">Website Copy</span>
-        <h3>OptimizePro SaaS Product Launch</h3>
-        <p class="portfolio-description">
-            Conversion-focused website copy that clearly communicates value and guides visitors toward sign-ups.
-        </p>
-    </div>
-</a>
-
-
-        <a href="technical.html" class="portfolio-item" target="_blank" rel="noopener noreferrer">
-            <div class="portfolio-content">
-                <span class="portfolio-category">Technical Writing</span>
-                <h3>Best Practices for Writing Clean &amp; Maintainable Code</h3>
-                <p class="portfolio-description">
-                    A practical technical guide that covers naming conventions, refactoring, and version control.
-                </p>
-            </div>
-        </a>
-
-        <a href="translation.html" class="portfolio-item" target="_blank" rel="noopener noreferrer">
-            <div class="portfolio-content">
-                <span class="portfolio-category">Transcription &amp; Translation</span>
-                <h3>Hindi to English Audio Transcripts</h3>
-                <p class="portfolio-description">
-                    Transcripts that turn Hindi media into accessible, publication-ready English documents.
-                </p>
-            </div>
-        </a>
-
-        <a href="products.html" class="portfolio-item" target="_blank" rel="noopener noreferrer">
-            <div class="portfolio-content">
-                <span class="portfolio-category">Product Descriptions</span>
-                <h3>Violet Beauty &amp; Fashion</h3>
-                <p class="portfolio-description">
-                    Persuasive product descriptions highlighting features and benefits to drive conversions.
-                </p>
-            </div>
-        </a>
-
-    </div>
-</section>
-
-        <section class="cta-section">
-            <h2>Let's Work Together</h2>
-            <p style="font-size: 1.2em;">Ready to elevate your content? I'd love to hear about your project.</p>
-            <a href="mailto:celestialdraco6@gmail.com" class="cta-button">Get In Touch</a>
-        </section>
-    </div>
-
-    <!-- Modal (standalone, not wrapped in <a>) -->
-    <div id="portfolioModal" class="modal" aria-hidden="true">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 style="margin: 0; color: white;">OptimizePro - SaaS Website Copy</h2>
-                <button class="close" type="button" onclick="closeModal()" aria-label="Close portfolio preview">&times;</button>
-            </div>
-            <div class="modal-body">
-                <iframe id="portfolioFrame" srcdoc="" title="OptimizePro SaaS Copy Preview"></iframe>
+            <div class="hero-image">
+                <img src="images/bag.jpg" alt="Professional portfolio showcase" class="hero-img">
             </div>
         </div>
+    </header>
+
+    <main>
+        <section class="expertise">
+            <div class="container">
+                <h2 class="section-title">Writing Expertise & Samples</h2>
+                <p class="section-subtitle">Explore my work across different writing disciplines. Click any category to view detailed samples.</p>
+                
+                <div class="expertise-grid">
+                    <a href="blog1.html" class="expertise-card">
+                        <div class="card-icon">📝</div>
+                        <h3>Blog Writing</h3>
+                        <p>Engaging, SEO-optimized blog posts that inform and inspire readers while driving organic traffic.</p>
+                        <span class="card-cta">View Samples →</span>
+                    </a>
+
+                    <a href="copywriting.html" class="expertise-card">
+                        <div class="card-icon">✍️</div>
+                        <h3>Copywriting</h3>
+                        <p>Persuasive copy that converts browsers into buyers with compelling messaging and clear calls-to-action.</p>
+                        <span class="card-cta">View Samples →</span>
+                    </a>
+
+                    <a href="technical.html" class="expertise-card">
+                        <div class="card-icon">🔧</div>
+                        <h3>Technical Writing</h3>
+                        <p>Clear, accurate documentation that makes complex technical concepts accessible to any audience.</p>
+                        <span class="card-cta">View Samples →</span>
+                    </a>
+
+                    <a href="translation.html" class="expertise-card">
+                        <div class="card-icon">🌐</div>
+                        <h3>Translation</h3>
+                        <p>Precise, culturally-aware translations that maintain meaning and tone across languages.</p>
+                        <span class="card-cta">View Samples →</span>
+                    </a>
+
+                    <a href="study.html" class="expertise-card">
+                        <div class="card-icon">📊</div>
+                        <h3>Case Studies</h3>
+                        <p>Data-driven narratives showcasing client success stories with measurable results and insights.</p>
+                        <span class="card-cta">View Samples →</span>
+                    </a>
+
+                    <a href="products.html" class="expertise-card">
+                        <div class="card-icon">🛍️</div>
+                        <h3>Product Descriptions</h3>
+                        <p>Captivating product copy that highlights benefits and drives purchasing decisions.</p>
+                        <span class="card-cta">View Samples →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2025 Pragati Pandey. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="mailto:celestialdraco6@gmail.com">celestialdraco6@gmail.com</a>
+        </div>
     </div>
+</footer>
 
     <script>
-        const saasHTML = `<h1>Demo SaaS Page</h1>`;
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
 
-        function openModal() {
-            const modal = document.getElementById('portfolioModal');
-            const frame = document.getElementById('portfolioFrame');
-            modal.style.display = 'block';
-            modal.setAttribute('aria-hidden', 'false');
-            frame.srcdoc = saasHTML;
-            document.body.style.overflow = 'hidden';
-        }
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
 
-        function closeModal() {
-            const modal = document.getElementById('portfolioModal');
-            const frame = document.getElementById('portfolioFrame');
-            modal.style.display = 'none';
-            modal.setAttribute('aria-hidden', 'true');
-            frame.srcdoc = '';
-            document.body.style.overflow = 'auto';
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('portfolioModal');
-            if (event.target === modal) {
-                closeModal();
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
             }
-        };
-    </script>
+        });
 
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
-
