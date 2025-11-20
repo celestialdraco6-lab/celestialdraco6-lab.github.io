@@ -239,6 +239,8 @@
             font-weight: bold;
             cursor: pointer;
             line-height: 1;
+            background: none;
+            border: none;
         }
 
         .close:hover {
@@ -256,17 +258,44 @@
             border-radius: 10px;
         }
 
+        /* Tablet & small laptop adjustments */
         @media (max-width: 768px) {
+            body {
+                font-size: 0.95rem;
+            }
+
+            .container {
+                padding: 30px 16px;
+            }
+
+            header {
+                padding: 40px 16px;
+                margin-bottom: 30px;
+            }
+
             h1 {
-                font-size: 2em;
+                font-size: 2.2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
             }
 
             .section {
                 padding: 30px 20px;
             }
 
+            .cta-section {
+                padding: 40px 20px;
+            }
+
             .portfolio-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .portfolio-content {
+                padding: 20px;
             }
 
             .modal-content {
@@ -276,6 +305,65 @@
 
             .modal-body iframe {
                 height: 400px;
+            }
+        }
+
+        /* Phone-specific tweaks */
+        @media (max-width: 480px) {
+            header {
+                padding: 30px 14px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .tagline {
+                font-size: 1.05em;
+            }
+
+            .section {
+                padding: 24px 16px;
+                border-radius: 12px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .skill-item {
+                padding: 16px 12px;
+                font-size: 0.95rem;
+            }
+
+            .cta-section {
+                padding: 30px 16px;
+                border-radius: 12px;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 260px;
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+
+            .modal-content {
+                width: 100%;
+                height: 100%;
+                max-width: none;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .modal-body {
+                padding: 16px;
+            }
+
+            .modal-body iframe {
+                height: 340px;
             }
         }
     </style>
@@ -303,7 +391,9 @@
             <h2>My Expertise</h2>
             <div class="skills-grid">
                 <!-- SEO skill tile highlighting study-focused SEO blog -->
-                <a class="skill-item" href="study.html"> &amp; SEO Content Writing</a>
+                <a class="skill-item" href="study.html">
+                    SEO Content Writing &amp; Study Tips Blog Optimization
+                </a>
                 <a class="skill-item" href="blog1.html">Blog &amp; Article Writing</a>
                 <a class="skill-item" href="copywriting.html">Copywriting</a>
                 <a class="skill-item" href="translation.html">Hindi to English Transcription</a>
@@ -391,7 +481,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h2 style="margin: 0; color: white;">OptimizePro - SaaS Website Copy</h2>
-                <button class="close" onclick="closeModal()" aria-label="Close portfolio preview">&times;</button>
+                <button class="close" type="button" onclick="closeModal()" aria-label="Close portfolio preview">&times;</button>
             </div>
             <div class="modal-body">
                 <iframe id="portfolioFrame" srcdoc="" title="OptimizePro SaaS Copy Preview"></iframe>
