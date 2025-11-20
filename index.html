@@ -50,18 +50,30 @@
 
         .contact-links {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .contact-links a {
-            color: #667eea;
             text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: color 0.3s;
         }
 
-        .contact-links a:hover {
-            color: #764ba2;
+        .contact-button {
+            display: inline-block;
+            background: #667eea;
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
         }
 
         .section {
@@ -101,6 +113,7 @@
             text-align: center;
             font-weight: 600;
             transition: transform 0.3s;
+            text-decoration: none;
         }
 
         .skill-item:hover {
@@ -120,6 +133,8 @@
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
+            text-decoration: none;
+            display: block;
         }
 
         .portfolio-item:hover {
@@ -270,8 +285,12 @@
             <h1>Pragati Pandey</h1>
             <p class="tagline">Crafting Stories That Connect & Convert</p>
             <div class="contact-links">
-                <a href="mailto:celestialdraco6@gmail.com">celestialdraco6@gmail.com</a>
-                <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:celestialdraco6@gmail.com" class="contact-button">
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener noreferrer" class="contact-button">
+                    LinkedIn
+                </a>
             </div>
         </header>
 
@@ -285,50 +304,45 @@
         <section class="section">
             <h2>My Expertise</h2>
             <div class="skills-grid">
+                <a class="skill-item" href="seo.html">
+                    SEO Content Writing
+                </a>
 
-    <div class="skill-item" onclick="window.location.href='seo.html'">
-        SEO Content Writing
-    </div>
+                <a class="skill-item" href="blog1.html">
+                    Blog &amp; Article Writing
+                </a>
 
-    <div class="skill-item" onclick="window.location.href='blog1.html'">
-        Blog & Article Writing
-    </div>
+                <a class="skill-item" href="copywriting.html">
+                    Copywriting
+                </a>
 
-    <div class="skill-item" onclick="window.location.href='copywriting.html'">
-        Copywriting
-    </div>
+                <a class="skill-item" href="social.html">
+                    Social Media Content
+                </a>
 
-    <div class="skill-item" onclick="window.location.href='social.html'">
-        Social Media Content
-    </div>
+                <a class="skill-item" href="technical.html">
+                    Technical Writing
+                </a>
 
-    <div class="skill-item" onclick="window.location.href='technical.html'">
-        Technical Writing
-    </div>
-
-    <div class="skill-item" onclick="window.location.href='products.html'">
-        Product Descriptions
-    </div>
-
-</div>
-
+                <a class="skill-item" href="products.html">
+                    Product Descriptions
+                </a>
+            </div>
         </section>
 
         <section class="section">
             <h2>Featured Work</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item" onclick="window.open('blog1.html', '_blank')">
-    <div class="portfolio-content">
-        <span class="portfolio-category">Blog Post</span>
-        <h3>The Ultimate Guide to Moisturizers for Oily, Sensitive & Acne-Prone Skin</h3>
-        <p class="portfolio-description">
-            An in-depth, SEO-optimized skincare guide featuring expert product recommendations, ingredient breakdowns,
-            and actionable skincare tips. Complete with engaging visuals and conversion-focused CTAs.
-        </p>
-    </div>
-</div>
-
-
+                <a class="portfolio-item" href="blog1.html" target="_blank">
+                    <div class="portfolio-content">
+                        <span class="portfolio-category">Blog Post</span>
+                        <h3>The Ultimate Guide to Moisturizers for Oily, Sensitive &amp; Acne-Prone Skin</h3>
+                        <p class="portfolio-description">
+                            An in-depth, SEO-optimized skincare guide featuring expert product recommendations, ingredient breakdowns,
+                            and actionable skincare tips. Complete with engaging visuals and conversion-focused CTAs.
+                        </p>
+                    </div>
+                </a>
 
                 <div class="portfolio-item" onclick="openModal()">
                     <div class="portfolio-content">
@@ -373,7 +387,7 @@
                 <div class="portfolio-item">
                     <div class="portfolio-content">
                         <span class="portfolio-category">Product Description</span>
-                        <h3>Violet Fashion & Beauty Products</h3>
+                        <h3>Violet Fashion &amp; Beauty Products</h3>
                         <p class="portfolio-description">
                             Compelling product descriptions for e-commerce brand VIOLET, including stylish women's bags and face makeup products. Crafted persuasive copy highlighting materials, features, and benefits to drive conversions.
                         </p>
@@ -496,5 +510,3 @@
     </script>
 </body>
 </html>
-
-
