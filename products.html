@@ -103,36 +103,37 @@
             flex-direction: column;
         }
 
-        /* MODERN PRODUCT IMAGE STYLING */
+        /* ROBUST, MODERN PRODUCT IMAGE STYLING (with fallback) */
         .product-media {
-            background: #fff;
-            aspect-ratio: 3 / 2; /* makes all product images consistently sized */
+            position: relative;
             width: 100%;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #fff;
+        }
+
+        .product-media::before {
+            content: "";
+            display: block;
+            padding-top: 66.67%; /* 3:2 aspect ratio */
         }
 
         .product-media img {
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
-            aspect-ratio: 3 / 2; /* for extra browser support */
             border-radius: 0;
             transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         @media (max-width: 768px) {
-            .product-media {
-                aspect-ratio: 4 / 5; /* portrait for mobile trend */
-            }
-            .product-media img {
-                aspect-ratio: 4 / 5;
+            .product-media::before {
+                padding-top: 125%; /* 4:5 portrait aspect for mobile */
             }
         }
-        /* END OF IMAGE STYLING */
+        /* END IMAGE ADAPTATION */
 
         .product-content {
             padding: 20px 24px 24px;
@@ -210,6 +211,97 @@
     </style>
 </head>
 <body>
-    <!-- Your body and product markup remains the same -->
+    <div class="container">
+        <header>
+            <h1>Violet Fashion &amp; Beauty</h1>
+            <p class="subtitle">
+                Selected product descriptions written for the VIOLET brand – showcasing persuasive, benefit-led copy.
+            </p>
+            <div class="top-actions">
+                <a href="index.html" class="button-pill">← Back to Portfolio</a>
+                <a href="mailto:celestialdraco6@gmail.com" class="button-pill">Work With Me</a>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Fashion – Stylish Bags for Women</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="bag.jpg" alt="Pink Violet backpack handbag on a neutral background" />
+                    </div>
+                    <div class="product-content">
+                        <div class="brand-name">Violet</div>
+                        <span class="product-tag">Women’s Bag</span>
+                        <h3 class="product-name">Stylish Bags For Women</h3>
+                        <p class="price">Price: Rs. 399</p>
+                        <p class="subheading">Why we made this</p>
+                        <p class="why-text">
+                            The beautiful design of the bag is made to grab attention and make the wearer stand out in any crowd.
+                            Crafted from strong, durable leather, it is designed to match the everyday needs of modern users.
+                        </p>
+                        <p class="why-text">
+                            The silhouette is simple yet eye-catching, and the spacious compartments make it ideal for daily use – whether for college, work, or casual outings.
+                        </p>
+                        <p class="subheading">Key Details</p>
+                        <ul class="spec-list">
+                            <li><strong>Material:</strong> Leather</li>
+                            <li><strong>Pattern:</strong> Solid</li>
+                            <li><strong>Type:</strong> Handbag</li>
+                            <li><strong>Set / Multipack:</strong> 1</li>
+                            <li><strong>Size:</strong> Free Size</li>
+                            <li><strong>Dimensions:</strong> Length 13 in, Width 10 in</li>
+                        </ul>
+                        <p class="note">
+                            Perfect for women who want a bag that feels both practical and polished – with enough room for daily essentials without feeling bulky.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Beauty – Face Blusher for Makeup</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-media">
+                        <img src="blusher.png" alt="Open compact of warm peach face blusher with brush" />
+                    </div>
+                    <div class="product-content">
+                        <div class="brand-name">Violet</div>
+                        <span class="product-tag">Face Makeup</span>
+                        <h3 class="product-name">Face Blusher for Face Makeup</h3>
+                        <p class="price">Price: Rs. 299</p>
+                        <p class="subheading">Why we made this</p>
+                        <p class="why-text">
+                            This blusher is made from ultra-fine particles that absorb excess oil to give a soft, matte finish – ideal for long days and humid weather.
+                        </p>
+                        <p class="why-text">
+                            The warm peach shade adds a natural-looking pop of colour to the cheeks, helping you achieve a fresh, healthy glow without looking overdone.
+                        </p>
+                        <p class="why-text">
+                            Each shade is designed to complement a wide range of skin tones, making it a versatile everyday blush for subtle glam or full glam looks.
+                        </p>
+                        <p class="subheading">Product Description</p>
+                        <ul class="spec-list">
+                            <li><strong>Item Form:</strong> Powder</li>
+                            <li><strong>Coverage:</strong> Full</li>
+                            <li><strong>Brand:</strong> VIOLET</li>
+                            <li><strong>Colour:</strong> SHADE-05 (Warm Peach)</li>
+                            <li><strong>Skin Tone:</strong> Suitable for all</li>
+                            <li><strong>Net Quantity:</strong> 8.0 g</li>
+                        </ul>
+                        <p class="note">
+                            Best suited for customers who want a buildable blush that stays comfortable on the skin while delivering a smooth, airbrushed finish.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2025 Product copy written by Pragati Pandey for VIOLET (sample portfolio work).
+        </footer>
+    </div>
 </body>
 </html>
