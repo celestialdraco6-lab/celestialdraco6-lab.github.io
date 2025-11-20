@@ -12,19 +12,14 @@
         }
 
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.7;
             color: #2d3748;
             background-color: #f7fafc;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -91,172 +86,511 @@
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, #EC4899 0%, #F97316 100%);
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
             padding: 30px;
-            border-radius: 16px;
+            border-radius: 12px;
             margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(240, 147, 251, 0.3);
         }
 
         .highlight-box h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
         }
 
-        .two-column {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
+        .info-box {
+            background: #edf2f7;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
         }
 
-        .two-column div {
-            font-size: 1rem;
-            color: #4a5568;
-        }
-
-        ul {
-            margin-left: 1.2rem;
-            margin-top: 10px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .tag {
-            display: inline-block;
-            background: #edf2ff;
-            color: #4338ca;
-            padding: 6px 12px;
-            border-radius: 999px;
-            font-size: 0.85rem;
+        .info-box h4 {
+            color: #667eea;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
             font-weight: 600;
-            margin-right: 8px;
-            margin-bottom: 8px;
         }
 
-        .footer-note {
-            font-size: 0.9rem;
-            color: #718096;
-            text-align: center;
-            margin: 40px 0 20px;
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
         }
 
-        @media (max-width: 600px) {
-            .hero {
-                padding: 60px 16px;
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #f7fafc;
+        }
+
+        .product-content {
+            padding: 25px;
+        }
+
+        .product-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .product-description {
+            color: #4a5568;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .benefit-tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 5px 5px 5px 0;
+            font-weight: 500;
+        }
+
+        .tips-list {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .tips-list li {
+            padding: 15px 20px;
+            margin: 12px 0;
+            background: #f7fafc;
+            border-left: 4px solid #48bb78;
+            border-radius: 6px;
+            font-size: 1.05rem;
+        }
+
+        .tips-list li::before {
+            content: "✓";
+            color: #48bb78;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .key-ingredients {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .ingredient-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .featured-product {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(252, 182, 159, 0.3);
+        }
+
+        .featured-product h3 {
+            color: #744210;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .featured-product p {
+            color: #744210;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .category-section {
+            margin: 50px 0;
+        }
+
+        .category-title {
+            font-size: 1.6rem;
+            color: #2d3748;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 5px solid #667eea;
+        }
+
+        .warning-box {
+            background: #fff5f5;
+            border: 2px solid #fc8181;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .warning-box h4 {
+            color: #c53030;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .warning-box p {
+            color: #742a2a;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
             }
 
-            .hero h1 {
-                font-size: 2rem;
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
             }
 
             .content-section {
                 padding: 30px 20px;
             }
         }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
     </style>
 </head>
 <body>
+    <div class="hero">
+        <div class="container">
+            <h1>The Ultimate Guide to Moisturizers for Oily, Sensitive & Acne-Prone Skin</h1>
+            <p>Transform your skincare routine with expert-approved moisturizers that hydrate without the shine</p>
+        </div>
+    </div>
 
-    <header class="hero">
-        <h1>The Ultimate Guide to Moisturizers for Oily, Sensitive & Acne-Prone Skin</h1>
-        <p>Find out how to hydrate your skin without clogging pores, triggering breakouts, or making your face feel greasy.</p>
-    </header>
+    <div class="container">
+        <div class="intro-section">
+            <p>Having very oily, sensitive, and acne-prone skin can feel like a constant challenge, but it doesn't have to be overwhelming. The key to success lies in understanding that oily skin isn't your enemy—it's simply your skin's way of protecting itself. With the right approach and carefully selected products, you can control excess oil while maintaining a healthy, radiant complexion.</p>
+            
+            <p>While oily skin is often caused by genetics or hormonal fluctuations, the good news is that proper skincare can make a significant difference. The foundation of any effective oily skin routine starts with one essential step that many people mistakenly skip: moisturization.</p>
+        </div>
 
-    <main class="container">
-        <section class="intro-section">
-            <p>
-                If you have oily, sensitive, or acne-prone skin, choosing a moisturizer can feel like a trap. 
-                Use the wrong one and your face turns into an oil slick or breaks out overnight. Use nothing and 
-                your skin barrier gets damaged, leading to more redness, dryness, and even more acne.
-            </p>
-            <p>
-                This guide breaks down how to choose the right moisturizer, what ingredients to look for (and avoid), 
-                and how to build a routine that keeps your skin hydrated and calm—without the shine.
-            </p>
-            <div style="margin-top: 15px;">
-                <span class="tag">Oily Skin</span>
-                <span class="tag">Sensitive Skin</span>
-                <span class="tag">Acne-Prone</span>
-                <span class="tag">Non-Comedogenic</span>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h2 class="section-title">Why Oily & Acne-Prone Skin Still Needs Moisturizer</h2>
-            <div class="two-column">
-                <div>
-                    <p>
-                        It’s a myth that oily skin doesn’t need moisturizer. Skipping moisturizer can actually make things worse. 
-                        When your skin is dehydrated, it may produce even more oil to compensate, leading to clogged pores and breakouts.
-                    </p>
-                    <ul>
-                        <li>Maintains your skin barrier</li>
-                        <li>Reduces irritation from acne treatments</li>
-                        <li>Helps balance oil production</li>
-                        <li>Prevents tightness and flakiness under makeup</li>
-                    </ul>
-                </div>
-                <div>
-                    <p>
-                        The key is not to avoid moisture—but to choose the right kind of hydration. Lightweight, non-comedogenic, 
-                        gel or lotion-based moisturizers are usually the best picks for oily and acne-prone skin.
-                    </p>
-                </div>
-            </div>
-
+        <div class="content-section">
+            <h2 class="section-title">Why Oily Skin Needs Moisturizer</h2>
+            
             <div class="highlight-box">
-                <h3>Quick Rule:</h3>
-                <p>
-                    Your moisturizer should leave your skin feeling calm, soft, and comfortable—not sticky, greasy, or tight. 
-                    If your face feels heavy or looks extra shiny within minutes, it’s not the right formula for you.
-                </p>
+                <h3>Breaking the Common Myth</h3>
+                <p>Many people with oily skin believe that adding moisturizer will make their skin even greasier. This couldn't be further from the truth! Skipping moisturizer can actually trigger your skin to produce even more oil to compensate for the lack of hydration. Oil and moisture are not the same thing—your skin needs both to stay balanced and healthy.</p>
             </div>
-        </section>
 
-        <section class="content-section">
-            <h2 class="section-title">Best Ingredients to Look For</h2>
-            <div class="two-column">
-                <div>
-                    <h3>Hydrating & Soothing</h3>
-                    <ul>
-                        <li><strong>Hyaluronic Acid</strong> – Attracts water into the skin without adding oil.</li>
-                        <li><strong>Glycerin</strong> – A gentle, effective humectant for all skin types.</li>
-                        <li><strong>Panthenol (Vitamin B5)</strong> – Helps soothe and support the skin barrier.</li>
-                        <li><strong>Aloe Vera</strong> – Calms redness and provides light hydration.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Barrier-Supporting (But Lightweight)</h3>
-                    <ul>
-                        <li><strong>Ceramides</strong> – Repair and strengthen your moisture barrier.</li>
-                        <li><strong>Squalane</strong> – Lightweight oil-like hydrator that doesn’t clog pores.</li>
-                        <li><strong>Niacinamide</strong> – Helps control oil, reduce redness, and support barrier function.</li>
-                    </ul>
-                </div>
+            <p>Whether you have oily skin or not, moisturizing is absolutely essential. Your skin requires hydration to maintain its protective barrier and prevent excessive dryness, which paradoxically can lead to increased oil production. When your skin is dehydrated, it signals your sebaceous glands to produce more oil, creating a vicious cycle of shine and breakouts.</p>
+
+            <div class="info-box">
+                <h4>The Science Behind Oily Skin</h4>
+                <p>Oily skin has larger, more active pores that attract dust and dirt more easily, leading to acne breakouts and blemishes. The thick sebum layer that forms on the skin's surface can make hydration seem unnecessary, but this layer actually prevents moisture from reaching deeper skin layers, leaving your skin dehydrated beneath the oily surface. This is why choosing the right moisturizer is crucial for achieving balance.</p>
             </div>
-        </section>
+        </div>
 
-        <section class="content-section">
-            <h2 class="section-title">Ingredients to Be Careful With</h2>
-            <p>
-                These aren’t always “bad,” but if your skin is sensitive or acne-prone, keep an eye on how your skin reacts:
-            </p>
-            <ul>
-                <li><strong>Heavy oils & butters</strong> like coconut oil, cocoa butter – can clog pores for some people.</li>
-                <li><strong>Strong fragrance (perfume/parfum)</strong> – may irritate sensitive or compromised skin.</li>
-                <li><strong>Alcohol denat</strong> in high amounts – can be drying over time.</li>
-                <li><strong>Essential oils</strong> – like lavender, tea tree, citrus oils can be irritating for some skin types.</li>
+        <div class="content-section">
+            <h2 class="section-title">How to Choose the Right Moisturizer</h2>
+            
+            <p>Selecting the perfect moisturizer for oily, sensitive, and acne-prone skin requires careful consideration. Here are the essential factors to look for:</p>
+
+            <ul class="tips-list">
+                <li><strong>Non-Comedogenic Formula:</strong> Always choose products labeled as non-comedogenic, meaning they won't clog your pores or trigger breakouts</li>
+                <li><strong>Oil-Free Base:</strong> Look for gel or water-based moisturizers that provide hydration without adding extra oil to your skin</li>
+                <li><strong>Lightweight Texture:</strong> Gel moisturizers absorb quickly and feel virtually weightless on the skin, making them ideal for oily complexions</li>
+                <li><strong>Free of Harmful Ingredients:</strong> Avoid products containing parabens, lanolin, and isopropyl alcohol, which can irritate sensitive skin</li>
             </ul>
-        </section>
 
-        <p class="footer-note">
-            This guide is for general educational purposes and doesn’t replace personalized advice from a dermatologist, 
-            especially if you have severe or persistent acne or irritation.
-        </p>
-    </main>
+            <div class="warning-box">
+                <h4>⚠️ What to Avoid</h4>
+                <p>Stay away from heavy, oil-based moisturizers and mineral oils. These can exacerbate oiliness and clog your pores, leading to more breakouts. Always read ingredient labels carefully before purchasing any skincare product.</p>
+            </div>
 
+            <div class="key-ingredients">
+                <span class="ingredient-badge">Salicylic Acid</span>
+                <span class="ingredient-badge">Hyaluronic Acid</span>
+                <span class="ingredient-badge">Niacinamide</span>
+                <span class="ingredient-badge">Glycerin</span>
+                <span class="ingredient-badge">Ceramides</span>
+                <span class="ingredient-badge">SPF Protection</span>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Featured Product Recommendation</h2>
+            
+            <div class="featured-product">
+                <h3>Clean & Clear Dual Action Facial Moisturizer</h3>
+                <p>This exceptional product stands out as an ideal choice for oily, sensitive, and acne-prone skin. Its unique dual-action formula contains salicylic acid, which actively works to reduce pimples while simultaneously moisturizing your skin. The lightweight, oil-free formula won't clog pores and is gentle enough for daily use.</p>
+                
+                <div style="margin-top: 20px;">
+                    <span class="benefit-tag">Salicylic Acid Treatment</span>
+                    <span class="benefit-tag">Oil-Free Formula</span>
+                    <span class="benefit-tag">Non-Comedogenic</span>
+                    <span class="benefit-tag">Lightweight</span>
+                    <span class="benefit-tag">Makeup-Friendly</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Premium Moisturizer Recommendations by Category</h2>
+
+            <div class="category-section">
+                <h3 class="category-title">For Intense Hydration</h3>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1556228852-80053c2e95f8?w=800&q=80" alt="Luxury skincare product" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Clinique Moisture Surge Thirst Relief</h4>
+                            <p class="product-description">A silicone-based gel-cream that delivers lasting hydration without clogging pores. Safe for acne-prone skin and packed with skin-conditioning agents and antioxidants to keep your complexion balanced and healthy.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">72-Hour Hydration</span>
+                                <span class="benefit-tag">Gel-Cream</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80" alt="Hydrating moisturizer" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Belif Aqua Bomb</h4>
+                            <p class="product-description">This cult-favorite gel moisturizer delivers instant refreshment with a bouncy texture that absorbs immediately. Perfect for oily skin that needs serious hydration without the heavy feel.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">Bouncy Texture</span>
+                                <span class="benefit-tag">Quick Absorption</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&q=80" alt="Hyaluronic acid cream" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Peter Thomas Roth Hyaluronic Cloud Cream</h4>
+                            <p class="product-description">Experience cloud-like hydration with this innovative formula featuring hyaluronic acid complexes. Provides lightweight moisture that plumps and smooths without leaving any greasy residue.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">Hyaluronic Acid</span>
+                                <span class="benefit-tag">Cloud Texture</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h3 class="category-title">For Brightening & Even Tone</h3>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80" alt="Brightening cream" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Sunday Riley Tidal</h4>
+                            <p class="product-description">A luxurious gel-cream that combines hydration with brightening benefits. Contains arbutin to help fade dark spots and even out skin tone while keeping oily skin balanced and luminous.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">Arbutin</span>
+                                <span class="benefit-tag">Brightening</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=800&q=80" alt="Watermelon moisturizer" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Glow Recipe Watermelon Glow Moisturizer</h4>
+                            <p class="product-description">This refreshing pink gel-cream is infused with watermelon extract and hyaluronic acid for a burst of hydration. Helps minimize pores and delivers a radiant, dewy glow without excess oil.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">Watermelon Extract</span>
+                                <span class="benefit-tag">Pore-Minimizing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&q=80" alt="Green beauty moisturizer" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Youth to the People Kale + Spinach Moisturizer</h4>
+                            <p class="product-description">A clean, vegan formula packed with superfood ingredients. This air-whipped texture provides weightless hydration while green tea and spinach work to improve clarity and radiance.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">Vegan</span>
+                                <span class="benefit-tag">Superfood</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h3 class="category-title">For Sensitive Skin</h3>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80" alt="Minimalist skincare" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Chanel N°1 DE CHANEL Cream</h4>
+                            <p class="product-description">A minimalist formula with only 10 carefully selected ingredients, perfect for sensitive, reactive skin. Contains conditioning shea butter and squalane to rebuild the moisture barrier while feeling lightweight and fortifying.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">10 Ingredients</span>
+                                <span class="benefit-tag">Squalane</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1556228578-dd3b72b63d2c?w=800&q=80" alt="Gel moisturizer" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Biossance Squalane Gel Cream</h4>
+                            <p class="product-description">Combines the nourishing benefits of squalane with a lightweight gel format. Ideal for sensitive, oily skin that needs deep hydration without irritation or heaviness.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">Plant Squalane</span>
+                                <span class="benefit-tag">Gel Format</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h3 class="category-title">Advanced Formulas</h3>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=800&q=80" alt="Serum texture" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Drunk Elephant B-Hydra Gel</h4>
+                            <p class="product-description">This ultra-light gel can function as a moisturizer for very oily skin types. Contains phytoceramides to strengthen the skin barrier while providing hydration without any heaviness.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">Phytoceramides</span>
+                                <span class="benefit-tag">Ultra-Light</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80" alt="Anti-aging cream" class="product-image">
+                        <div class="product-content">
+                            <h4 class="product-name">Drunk Elephant Protini Polypeptide Cream</h4>
+                            <p class="product-description">A lightweight cream packed with signal peptides and plant-based extracts. Perfect for oily skin seeking anti-aging benefits without the typical heavy texture of age-prevention formulas.</p>
+                            <div style="margin-top: 15px;">
+                                <span class="benefit-tag">Peptides</span>
+                                <span class="benefit-tag">Anti-Aging</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">SPF & Overnight Treatments</h2>
+            
+            <div class="info-box">
+                <h4>Daytime Protection</h4>
+                <p><strong>Biore UV Perfect Milk SPF 50:</strong> This Japanese sunscreen is incredibly lightweight and mattifying, using physical filters to create a satin finish that controls shine throughout the day.</p>
+                <p style="margin-top: 15px;"><strong>Elta MD UV Clear SPF 46:</strong> A Western favorite that's both mattifying and non-drying, formulated with niacinamide to address multiple skin concerns while providing broad-spectrum protection.</p>
+            </div>
+
+            <div class="info-box">
+                <h4>Overnight Hydration</h4>
+                <p><strong>Laneige Water Sleeping Mask:</strong> Provides extra hydration overnight with a lightweight texture that won't suffocate oily skin.</p>
+                <p style="margin-top: 15px;"><strong>Belif Aqua Bomb Sleeping Mask:</strong> Delivers intensive moisture while you sleep without leaving skin greasy in the morning.</p>
+                <p style="margin-top: 15px;"><strong>Glow Recipe Watermelon Sleeping Mask:</strong> Combines hydration with gentle exfoliating properties for a brighter, more refined complexion by morning.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Affordable Drugstore Options</h2>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80" alt="Drugstore skincare" class="product-image">
+                    <div class="product-content">
+                        <h4 class="product-name">Neutrogena Oil-Free Moisturizer SPF 15</h4>
+                        <p class="product-description">Clinically proven to provide sun protection with long-lasting moisturization. The lightweight, non-greasy formula keeps skin hydrated all day while protecting against UV damage, making it perfect for daily use.</p>
+                        <div style="margin-top: 15px;">
+                            <span class="benefit-tag">SPF 15</span>
+                            <span class="benefit-tag">Affordable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&q=80" alt="Calamine lotion" class="product-image">
+                    <div class="product-content">
+                        <h4 class="product-name">Lacto Calamine Skin Balance Daily Nourishing Lotion</h4>
+                        <p class="product-description">Specially formulated for oily skin with kaolin to exfoliate dead skin cells and glycerin to control excess oil. Zinc oxide provides antiseptic properties that help prevent breakouts while maintaining your skin's pH level.</p>
+                        <div style="margin-top: 15px;">
+                            <span class="benefit-tag">Kaolin Clay</span>
+                            <span class="benefit-tag">pH Balancing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80" alt="Natural skincare" class="product-image">
+                    <div class="product-content">
+                        <h4 class="product-name">Forest Essentials Light Hydrating Facial Gel</h4>
+                        <p class="product-description">An Ayurvedic-based formula containing pure cactus extracts, a natural humectant that seals moisture into your skin for long-lasting hydration. Offers healing and cleansing properties in a lightweight gel format.</p>
+                        <div style="margin-top: 15px;">
+                            <span class="benefit-tag">Ayurvedic</span>
+                            <span class="benefit-tag">Natural</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Remember: Consistency is Key</h2>
+            <p>Moisturizing is an essential step in your skincare routine for all skin types, including oily skin. By choosing the right water-based, non-comedogenic moisturizer and using it consistently morning and night, you can achieve the balanced, healthy complexion you deserve. Your skin will thank you!</p>
+        </div>
+    </div>
+
+    <div style="background: #2d3748; color: white; padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <div class="container">
+            <p style="font-size: 0.9rem; opacity: 0.8;">© 2025 Skincare Guide. This article is for informational purposes only and is not a substitute for professional dermatological advice.</p>
+        </div>
+    </div>
 </body>
 </html>
