@@ -498,3 +498,13 @@ p {
 .mb-2 {
     margin-bottom: 2rem;
 }
+/* Blog sample image sizing */
+.sample-page .sample-content .blog-product-image {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 1.25rem 0;
+}
