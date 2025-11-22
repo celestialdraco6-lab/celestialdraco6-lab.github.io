@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Copywriting sample by Pragati Pandey – persuasive SaaS landing page copy for OptimizePro workflow optimization software.">
+    <meta property="og:title" content="Copywriting Sample | Pragati Pandey">
+    <meta property="og:description" content="Professional copywriting showcasing conversion-focused messaging, clear CTAs, and benefit-driven content.">
+    <meta property="og:type" content="website">
+    <title>Copywriting Sample – Pragati Pandey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>">
+    <style>
+        .sample-page {
+            padding: 2rem 0 4rem;
+            min-height: 100vh;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--accent-tertiary);
+            transform: translateX(-4px);
+        }
+        
+        .sample-page h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+        
+        .sample-context {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .sample-context strong {
+            color: var(--accent-primary);
+        }
+        
+        .copy-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+        
+        .copy-section:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .section-label {
+            display: inline-block;
+            background: var(--accent-primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .copy-section h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+        
+        .copy-section h3 {
+            font-size: 1.75rem;
+            margin: 2rem 0 1rem;
+            color: var(--accent-primary);
+        }
+        
+        .copy-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+        }
+        
+        .copy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .copy-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .copy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .copy-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+        
+        .copy-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--accent-primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-tertiary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--accent-primary);
+            color: var(--accent-primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent-primary);
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .helper-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .sample-page h1 {
+                font-size: 2rem;
+            }
+            
+            .copy-section {
+                padding: 1.5rem;
+            }
+            
+            .copy-section h2 {
+                font-size: 1.75rem;
+            }
+            
+            .copy-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="blog1.html" class="nav-link">Blog Writing</a></li>
+                <li><a href="copywriting.html" class="nav-link active">Copywriting</a></li>
+                <li><a href="technical.html" class="nav-link">Technical Writing</a></li>
+                <li><a href="translation.html" class="nav-link">Translation</a></li>
+                <li><a href="study.html" class="nav-link">Case Studies</a></li>
+                <li><a href="products.html" class="nav-link">Product Descriptions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="sample-page">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            
+            <h1>Copywriting Sample</h1>
+            
+            <div class="sample-context">
+                <p><strong>Project Context:</strong> Landing page copy for OptimizePro, a fictional SaaS workflow optimization tool. The goal was to create conversion-focused messaging that highlights pain points, presents clear solutions, and drives action with compelling CTAs.</p>
+            </div>
+
+            <!-- Hero Section -->
+            <div class="copy-section">
+                <span class="section-label">Hero / Above the Fold</span>
+                <h2>Stop Wrestling with Inefficient Workflows</h2>
+                <p>OptimizePro streamlines your operations, eliminates bottlenecks, and delivers measurable performance gains—so you can focus on what matters most.</p>
+                <div class="cta-buttons">
+                    <a href="#demo" class="btn btn-primary">Book Your Free Demo</a>
+                    <a href="#features" class="btn btn-outline">See How It Works</a>
+                </div>
+            </div>
+
+            <!-- Problem Section -->
+            <div class="copy-section">
+                <span class="section-label">Problem Agitation</span>
+                <h2>The Hidden Cost of Manual Processes</h2>
+                <p>Every day your team spends navigating disconnected tools and repetitive tasks is a day lost to meaningful progress.</p>
+                
+                <div class="copy-grid">
+                    <div class="copy-card">
+                        <div class="card-icon">⏱️</div>
+                        <h4>Time Drain</h4>
+                        <p>Your team wastes hours on repetitive tasks that could be automated, leaving little time for strategic work that drives real results.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <div class="card-icon">🔗</div>
+                        <h4>Fragmented Systems</h4>
+                        <p>Data scattered across multiple platforms creates confusion, errors, and delays—making it nearly impossible to maintain a single source of truth.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <div class="card-icon">📊</div>
+                        <h4>Limited Visibility</h4>
+                        <p>Without real-time insights, you're making decisions in the dark, unable to spot issues before they escalate or capitalize on opportunities quickly.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <div class="card-icon">💸</div>
+                        <h4>Rising Costs</h4>
+                        <p>Inefficiencies compound over time, inflating operational costs and preventing your business from scaling effectively.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution Section -->
+            <div class="copy-section">
+                <span class="section-label">Solution / Features</span>
+                <h2>Meet OptimizePro: Your Complete Workflow Solution</h2>
+                <p>Designed for teams that refuse to settle for mediocrity, OptimizePro brings intelligence, automation, and clarity to your daily operations.</p>
+                
+                <div class="copy-grid">
+                    <div class="copy-card">
+                        <div class="card-icon">⚡</div>
+                        <h4>Intelligent Automation</h4>
+                        <p>Automate routine tasks with smart workflows that adapt to your business needs, freeing your team to focus on high-impact activities that drive growth.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <div class="card-icon">🔄</div>
+                        <h4>Seamless Integration</h4>
+                        <p>Connect all your existing tools in one unified platform. OptimizePro works with the software you already use, eliminating data silos and duplicate work.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <div class="card-icon">📈</div>
+                        <h4>Real-Time Analytics</h4>
+                        <p>Make confident decisions with comprehensive dashboards that deliver actionable insights exactly when you need them—no more guesswork.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <div class="card-icon">🛡️</div>
+                        <h4>Enterprise Security</h4>
+                        <p>Rest easy knowing your data is protected with bank-level encryption, compliance certifications, and robust access controls that meet industry standards.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <div class="card-icon">👥</div>
+                        <h4>Team Collaboration</h4>
+                        <p>Break down communication barriers with built-in collaboration tools that keep everyone aligned, informed, and working toward common goals.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <div class="card-icon">📱</div>
+                        <h4>Mobile-First Design</h4>
+                        <p>Manage your workflows from anywhere with our intuitive mobile app—because productivity shouldn't be confined to your desk.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="copy-section">
+                <span class="section-label">Benefits / Value Props</span>
+                <h2>The OptimizePro Advantage</h2>
+                <p>Transform how your team works and unlock measurable results that impact your bottom line.</p>
+                
+                <div class="copy-grid">
+                    <div class="copy-card">
+                        <h4>✓ Save 15+ Hours Weekly</h4>
+                        <p>Reclaim valuable time by automating repetitive processes and eliminating manual data entry across your workflow.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <h4>✓ Reduce Errors by 80%</h4>
+                        <p>Minimize costly mistakes with automated validation, smart alerts, and built-in quality controls at every step.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <h4>✓ Increase Team Productivity</h4>
+                        <p>Empower your team to accomplish more with streamlined processes that remove friction and boost efficiency.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <h4>✓ Scale Without Growing Pains</h4>
+                        <p>Grow your business confidently with infrastructure that adapts to your needs without requiring constant reconfiguration.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <h4>✓ Faster Decision Making</h4>
+                        <p>Cut decision time in half with instant access to the metrics and insights that matter most to your business.</p>
+                    </div>
+
+                    <div class="copy-card">
+                        <h4>✓ ROI in 60 Days</h4>
+                        <p>See tangible returns quickly with rapid implementation and immediate efficiency gains that pay for themselves.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Proof -->
+            <div class="copy-section">
+                <span class="section-label">Social Proof</span>
+                <h2>Trusted by Forward-Thinking Teams</h2>
+                <p>Join hundreds of companies that have transformed their operations with OptimizePro.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <p class="stat-value">500+</p>
+                        <p class="stat-label">Companies Optimized</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <p class="stat-value">2M+</p>
+                        <p class="stat-label">Tasks Automated Daily</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <p class="stat-value">98%</p>
+                        <p class="stat-label">Customer Satisfaction</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <p class="stat-value">4.8/5</p>
+                        <p class="stat-label">Average User Rating</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="copy-section">
+                <span class="section-label">Final CTA</span>
+                <h2>Ready to Transform Your Workflow?</h2>
+                <p>See OptimizePro in action with a personalized demo tailored to your team's specific needs. No commitment required.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Schedule Your Free Demo Today</a>
+                </div>
+                <p class="helper-text">
+                    ⚡ Setup in 30 minutes  |  💳 No credit card required  |  🤝 14-day free trial
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Pragati Pandey. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener">Let's Connect</a>
+                <a href="mailto:celestialdraco6@gmail.com">Chat With Me</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
