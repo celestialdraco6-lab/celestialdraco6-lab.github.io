@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Technical writing sample by Pragati Pandey – a clear, structured article on best practices for writing clean and maintainable code.">
+    <meta property="og:title" content="Technical Writing Sample | Pragati Pandey">
+    <meta property="og:description" content="A professional technical article explaining how to write clean, maintainable code with practical, easy-to-follow best practices.">
+    <meta property="og:type" content="website">
+    <title>Technical Writing Sample – Pragati Pandey</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="blog1.html" class="nav-link">Blog Writing</a></li>
+                <li><a href="copywriting.html" class="nav-link">Copywriting</a></li>
+                <li><a href="technical.html" class="nav-link active">Technical Writing</a></li>
+                <li><a href="translation.html" class="nav-link">Translation</a></li>
+                <li><a href="study.html" class="nav-link">Case Studies</a></li>
+                <li><a href="products.html" class="nav-link">Product Descriptions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="sample-page">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+            <h1>Technical Writing Sample: Best Practices for Writing Clean and Maintainable Code</h1>
+
+            <div class="sample-context">
+                <p><strong>Project Context:</strong> This technical article was written to help beginner and intermediate developers understand how to write clean, maintainable code. The goal is to explain core principles in simple language while keeping the structure scannable and practical.</p>
+            </div>
+
+            <div class="sample-content">
+                <p>Writing clean and maintainable code is essential for software development success. It not only improves readability and reduces bugs but also ensures your codebase can evolve smoothly over time. Here are some proven practices to help you write code that your future self and teammates will thank you for.</p>
+
+                <h2>1. Meaningful and Consistent Naming</h2>
+                <p>
+                    Choose clear, descriptive names for variables, functions, and classes. Avoid vague names like
+                    <code>temp</code> or <code>data</code> and prefer names that describe the purpose or content, such as
+                    <code>userAge</code> or <code>calculateTax</code>. Consistency in naming conventions (such as
+                    <code>camelCase</code> or <code>snake_case</code>) across the project also enhances readability.
+                </p>
+
+                <h2>2. Keep Functions and Methods Small</h2>
+                <p>
+                    Each function or method should do one thing and do it well. Breaking complex tasks into smaller
+                    chunks makes it easier to test and debug. Aim for functions that fit entirely within your screen
+                    without scrolling, as this helps you grasp their behavior quickly.
+                </p>
+
+                <h2>3. Write Comments Where Necessary</h2>
+                <p>
+                    Good code often speaks for itself, but use comments to explain the “why” behind tricky or
+                    non-obvious decisions. Avoid redundant comments that restate the obvious. Comments should enhance
+                    understanding without cluttering the code.
+                </p>
+
+                <h2>4. Use Consistent Formatting and Style</h2>
+                <p>
+                    Adopt a style guide for indentation, spacing, brace placement, and line length. Consistent formatting
+                    makes the code visually uniform, which is crucial when multiple developers collaborate. Tools like
+                    Prettier or ESLint can automate formatting in many languages and help enforce a standard style.
+                </p>
+
+                <h2>5. Refactor Regularly</h2>
+                <p>
+                    Don’t hesitate to revisit and improve your code as requirements evolve. Refactoring helps remove
+                    duplication, improve structure, and simplify logic. Regular refactoring reduces technical debt and
+                    keeps the codebase healthy and easier to extend.
+                </p>
+
+                <h2>6. Write Automated Tests</h2>
+                <p>
+                    Test your code with unit tests, integration tests, or end-to-end tests. Automated testing verifies
+                    your code’s correctness and helps catch regressions early. Well-written tests also serve as
+                    documentation by showing examples of how the code is expected to behave.
+                </p>
+
+                <h2>7. Avoid Deep Nesting and Long Parameter Lists</h2>
+                <p>
+                    Deeply nested code is hard to read and maintain. Flatten complex conditional logic where possible
+                    by extracting smaller functions or using guard clauses. Similarly, keep function parameter lists
+                    short; if too many values are needed, consider using objects or data structures to group related
+                    parameters.
+                </p>
+
+                <h2>8. Leverage Version Control</h2>
+                <p>
+                    Use Git or another version control system consistently. Commit small, meaningful changes with clear
+                    messages. Version control makes it easier to collaborate, track the history of a codebase, and roll
+                    back if something goes wrong. It’s an essential tool for any modern development workflow.
+                </p>
+
+                <p>
+                    Clean, maintainable code is not about perfection; it’s about making intentional choices that make
+                    your code easier to read, test, and improve over time. By following these practices, you’ll build
+                    codebases that are friendlier to both people and future changes.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Pragati Pandey. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:celestialdraco6@gmail.com">celestialdraco6@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
