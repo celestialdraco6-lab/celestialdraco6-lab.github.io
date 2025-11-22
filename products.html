@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product description samples by Pragati Pandey – persuasive, benefit-led copy for fashion and beauty products.">
+    <meta property="og:title" content="Product Description Samples | Pragati Pandey">
+    <meta property="og:description" content="Professional e-commerce product descriptions showcasing persuasive copywriting and compelling benefit-focused messaging.">
+    <meta property="og:type" content="website">
+    <title>Product Description Samples – Pragati Pandey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>">
+    <style>
+        .sample-page {
+            padding: 2rem 0 4rem;
+            min-height: 100vh;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--accent-tertiary);
+            transform: translateX(-4px);
+        }
+        
+        .sample-page h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+        
+        .sample-context {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+        
+        .sample-context p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+        
+        .product-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .product-media {
+            position: relative;
+            width: 100%;
+            padding-top: 66.67%;
+            overflow: hidden;
+            background: var(--bg-primary);
+        }
+        
+        .product-media img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-media img {
+            transform: scale(1.05);
+        }
+        
+        .product-content {
+            padding: 2rem;
+        }
+        
+        .brand-name {
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent-tertiary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .product-tag {
+            display: inline-block;
+            background: var(--accent-primary);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .product-name {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        
+        .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .subheading {
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--accent-tertiary);
+            font-size: 1.1rem;
+        }
+        
+        .why-text {
+            font-size: 0.98em;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .spec-list {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+            font-size: 0.95em;
+            color: var(--text-secondary);
+        }
+        
+        .spec-list li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+        
+        .spec-list strong {
+            color: var(--text-primary);
+        }
+        
+        .note {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            margin-top: 1.25rem;
+            font-style: italic;
+            padding: 1rem;
+            background: var(--bg-primary);
+            border-left: 3px solid var(--accent-secondary);
+            border-radius: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .sample-page h1 {
+                font-size: 2rem;
+            }
+            
+            .product-section {
+                padding: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-content {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .product-media {
+                padding-top: 125%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="blog1.html" class="nav-link">Blog Writing</a></li>
+                <li><a href="copywriting.html" class="nav-link">Copywriting</a></li>
+                <li><a href="technical.html" class="nav-link">Technical Writing</a></li>
+                <li><a href="translation.html" class="nav-link">Translation</a></li>
+                <li><a href="study.html" class="nav-link">Case Studies</a></li>
+                <li><a href="products.html" class="nav-link active">Product Descriptions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="sample-page">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+            
+            <h1>Product Description Samples</h1>
+            
+            <div class="sample-context">
+                <p>Selected product descriptions written for the VIOLET brand – showcasing persuasive, benefit-led copy.</p>
+            </div>
+
+            <!-- Fashion Section -->
+            <div class="product-section">
+                <h2 class="section-title">Fashion – Stylish Bags for Women</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80" alt="Pink stylish women's handbag on neutral background" />
+                        </div>
+                        <div class="product-content">
+                            <div class="brand-name">Violet</div>
+                            <span class="product-tag">Women's Bag</span>
+                            <h3 class="product-name">Stylish Bags For Women</h3>
+                            <p class="price">Price: Rs. 399</p>
+                            <p class="subheading">Why we made this</p>
+                            <p class="why-text">
+                                The beautiful design of the bag is made to grab attention and make the wearer stand out in any crowd.
+                                Crafted from strong, durable leather, it is designed to match the everyday needs of modern users.
+                            </p>
+                            <p class="why-text">
+                                The silhouette is simple yet eye-catching, and the spacious compartments make it ideal for daily use – whether for college, work, or casual outings.
+                            </p>
+                            <p class="subheading">Key Details</p>
+                            <ul class="spec-list">
+                                <li><strong>Material:</strong> Leather</li>
+                                <li><strong>Pattern:</strong> Solid</li>
+                                <li><strong>Type:</strong> Handbag</li>
+                                <li><strong>Set / Multipack:</strong> 1</li>
+                                <li><strong>Size:</strong> Free Size</li>
+                                <li><strong>Dimensions:</strong> Length 13 in, Width 10 in</li>
+                            </ul>
+                            <p class="note">
+                                Perfect for women who want a bag that feels both practical and polished – with enough room for daily essentials without feeling bulky.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Beauty Section -->
+            <div class="product-section">
+                <h2 class="section-title">Beauty – Face Blusher for Makeup</h2>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-media">
+                            <img src="https://images.unsplash.com/photo-1596704017254-9b121068ec31?w=800&q=80" alt="Open compact of warm peach face blusher with makeup brush" />
+                        </div>
+                        <div class="product-content">
+                            <div class="brand-name">Violet</div>
+                            <span class="product-tag">Face Makeup</span>
+                            <h3 class="product-name">Face Blusher for Face Makeup</h3>
+                            <p class="price">Price: Rs. 299</p>
+                            <p class="subheading">Why we made this</p>
+                            <p class="why-text">
+                                This blusher is made from ultra-fine particles that absorb excess oil to give a soft, matte finish – ideal for long days and humid weather.
+                            </p>
+                            <p class="why-text">
+                                The warm peach shade adds a natural-looking pop of colour to the cheeks, helping you achieve a fresh, healthy glow without looking overdone.
+                            </p>
+                            <p class="why-text">
+                                Each shade is designed to complement a wide range of skin tones, making it a versatile everyday blush for subtle glam or full glam looks.
+                            </p>
+                            <p class="subheading">Product Description</p>
+                            <ul class="spec-list">
+                                <li><strong>Item Form:</strong> Powder</li>
+                                <li><strong>Coverage:</strong> Full</li>
+                                <li><strong>Brand:</strong> VIOLET</li>
+                                <li><strong>Colour:</strong> SHADE-05 (Warm Peach)</li>
+                                <li><strong>Skin Tone:</strong> Suitable for all</li>
+                                <li><strong>Net Quantity:</strong> 8.0 g</li>
+                            </ul>
+                            <p class="note">
+                                Best suited for customers who want a buildable blush that stays comfortable on the skin while delivering a smooth, airbrushed finish.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Pragati Pandey. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener">Let's Connect</a>
+                <a href="mailto:celestialdraco6@gmail.com">Chat With Me</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
