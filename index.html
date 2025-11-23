@@ -10,14 +10,413 @@
     <meta property="og:url" content="https://celestialdraco6-lab.github.io/">
     <title>Professional Freelance Writer Portfolio | Pragati Pandey</title>
 
-    <!-- Favicon + Font Preload -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style">
-
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --beige: #F5F5DC;
+            --beige-dark: #EFE7DA;
+            --sage: #A8BBA2;
+            --sage-light: #B7CBB2;
+            --dark-green: #314733;
+            --medium-green: #6D8C6D;
+            --text-muted: #7A8F7A;
+            --bg-gradient-start: #A8BBA2;
+            --bg-gradient-end: #EDE6D6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-muted);
+            background: linear-gradient(120deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-green);
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--dark-green);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-bottom: 3px solid var(--beige);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--beige);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--beige);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: white;
+        }
+
+        .theme-toggle-desktop {
+            background: linear-gradient(90deg, var(--beige) 0%, var(--sage) 100%);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--dark-green);
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(245, 245, 220, 0.2);
+        }
+
+        .theme-toggle-desktop:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(245, 245, 220, 0.3);
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--beige);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 0;
+            margin: 32px auto;
+            max-width: 1200px;
+        }
+
+        .hero-container {
+            background: var(--beige);
+            border-radius: 28px;
+            box-shadow: 0 8px 24px rgba(168, 187, 162, 0.15);
+            padding: 48px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-green);
+        }
+
+        .hero-tagline {
+            font-size: 1.3rem;
+            color: var(--medium-green);
+            margin-bottom: 1rem;
+        }
+
+        .hero-intro {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(49, 71, 51, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .hero-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(49, 71, 51, 0.3);
+        }
+
+        .btn-primary, .resume-btn {
+            background: linear-gradient(90deg, var(--beige) 0%, var(--sage) 100%);
+            color: var(--dark-green);
+            padding: 12px 32px;
+            border-radius: 18px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(168, 187, 162, 0.15);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover, .resume-btn:hover {
+            background: linear-gradient(90deg, var(--beige-dark) 0%, var(--sage-light) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(168, 187, 162, 0.25);
+            color: var(--medium-green);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--dark-green);
+            padding: 12px 32px;
+            border-radius: 18px;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid var(--dark-green);
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: var(--dark-green);
+            color: var(--beige);
+        }
+
+        /* Expertise Section */
+        .expertise {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--dark-green);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            color: var(--text-muted);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .expertise-card, .card, .main-content {
+            background: var(--beige);
+            padding: 32px;
+            border-radius: 28px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(168, 187, 162, 0.12);
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(168, 187, 162, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .expertise-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark-green);
+        }
+
+        .expertise-card p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        .card-cta {
+            color: var(--medium-green);
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .expertise-card:hover .card-cta {
+            transform: translateX(5px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-green);
+            color: var(--beige);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+            border-radius: 28px 28px 0 0;
+            box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--beige);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .email-btn {
+            background: linear-gradient(90deg, var(--beige) 0%, var(--sage) 100%);
+            border: none;
+            padding: 12px 32px;
+            border-radius: 18px;
+            font-weight: 600;
+            color: var(--dark-green);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(245, 245, 220, 0.15);
+            transition: all 0.3s;
+            font-size: 1rem;
+            margin-top: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .email-btn:hover {
+            background: linear-gradient(90deg, var(--beige-dark) 0%, var(--sage-light) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(245, 245, 220, 0.25);
+            color: var(--medium-green);
+        }
+
+        .email-btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .theme-toggle-desktop {
+                display: none;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 32px 24px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.1rem;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-container {
+                padding: 24px 16px;
+            }
+
+            .expertise-card {
+                padding: 24px;
+            }
+
+            .btn-primary, .btn-secondary, .email-btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -36,9 +435,6 @@
                 <li><a href="translation.html" class="nav-link">Translation</a></li>
                 <li><a href="study.html" class="nav-link">Case Studies</a></li>
                 <li><a href="products.html" class="nav-link">Product Descriptions</a></li>
-                <li class="theme-toggle-mobile">
-                    <button id="themeToggleMobile" aria-label="Toggle dark mode">Dark Mode</button>
-                </li>
             </ul>
             <button id="themeToggle" class="theme-toggle-desktop" aria-label="Toggle dark mode">Dark Mode</button>
         </div>
@@ -56,12 +452,12 @@
                     Turning feedback, questions, and rough drafts into trusted narratives.
                 </p>
                 <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-                    <a href="optimized_resume.jpg" download class="nav-link" style="background: var(--primary-color, #2c5f8d); color: white; padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; display: inline-block;">Download Resume</a>
-                    <a href="mailto:celestialdraco6@gmail.com" class="nav-link" style="background: transparent; color: var(--primary-color, #2c5f8d); padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; display: inline-block; border: 2px solid var(--primary-color, #2c5f8d);">Contact Me</a>
+                    <a href="optimized_resume.jpg" download class="btn-primary">📄 Download Resume</a>
+                    <a href="mailto:celestialdraco6@gmail.com" class="btn-secondary">Contact Me</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="my_image.png" alt="Pragati Pandey Professional Photo" class="hero-img" style="max-width: 220px; border-radius: 15px;">
+                <img src="my_image.png" alt="Pragati Pandey Professional Photo" class="hero-img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22%3E%3Crect fill=%22%23A8BBA2%22 width=%22220%22 height=%22220%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2280%22%3E%E2%9C%8D%EF%B8%8F%3C/text%3E%3C/svg%3E';">
             </div>
         </div>
     </header>
@@ -74,37 +470,37 @@
                 
                 <div class="expertise-grid">
                     <a href="blog1.html" class="expertise-card">
-                        <div class="card-icon">Pen</div>
+                        <div class="card-icon">✍️</div>
                         <h3>Blog Writing</h3>
                         <p>Engaging, SEO-optimized blog posts that inform and inspire readers while driving organic traffic.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
                     <a href="copywriting.html" class="expertise-card">
-                        <div class="card-icon">Writing</div>
+                        <div class="card-icon">📝</div>
                         <h3>Copywriting</h3>
                         <p>Persuasive copy that converts browsers into buyers with compelling messaging and clear calls-to-action.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
                     <a href="technical.html" class="expertise-card">
-                        <div class="card-icon">Tool</div>
+                        <div class="card-icon">🔧</div>
                         <h3>Technical Writing</h3>
                         <p>Clear, accurate documentation that makes complex technical concepts accessible to any audience.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
                     <a href="translation.html" class="expertise-card">
-                        <div class="card-icon">Globe</div>
+                        <div class="card-icon">🌍</div>
                         <h3>Translation</h3>
                         <p>Precise, culturally-aware translations that maintain meaning and tone across languages.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
                     <a href="study.html" class="expertise-card">
-                        <div class="card-icon">Chart</div>
+                        <div class="card-icon">📊</div>
                         <h3>Case Studies</h3>
                         <p>Data-driven narratives showcasing client success stories with measurable results and insights.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
                     <a href="products.html" class="expertise-card">
-                        <div class="card-icon">Shopping</div>
+                        <div class="card-icon">🛍️</div>
                         <h3>Product Descriptions</h3>
                         <p>Captivating product copy that highlights benefits and drives purchasing decisions.</p>
                         <span class="card-cta">View Samples →</span>
@@ -117,14 +513,30 @@
     <footer class="footer">
         <div class="footer-container">
             <p>© 2025 Pragati Pandey. All rights reserved.</p>
+            <button class="email-btn" onclick="window.location.href='mailto:celestialdraco6@gmail.com'">
+                <span>📧</span>
+                <span>Email Me</span>
+            </button>
             <div class="footer-links">
-                <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="mailto:celestialdraco6@gmail.com">celestialdraco6@gmail.com</a>
+                <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener">LinkedIn Profile</a>
             </div>
         </div>
     </footer>
 
-    <!-- Only one script – everything is now in script.js -->
-    <script src="script.js"></script>
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Theme toggle functionality (placeholder)
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            alert('Dark mode feature coming soon!');
+        });
+    </script>
 </body>
 </html>
