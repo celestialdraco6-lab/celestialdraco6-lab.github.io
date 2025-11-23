@@ -7,547 +7,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+   
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --beige: #F5F5DC;
-            --beige-dark: #EFE7DA;
-            --cream: #FFFCEE;
-            --sage: #A8BBA2;
-            --sage-light: #B7CBB2;
-            --dark-green: #314733;
-            --medium-green: #6D8C6D;
-            --text-muted: #7A8F7A;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-muted);
-            background: linear-gradient(120deg, #A8BBA2 0%, #EDE6D6 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--dark-green);
-        }
-
-        /* Solid Sage Green Navigation */
-        .navbar {
-            background: #A8BBA2;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 6px rgba(168, 187, 162, 0.09);
-            border-bottom: 2px solid #EFE7DA;
-            transition: all 0.3s ease;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .nav-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2E3B2E;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-
-        .nav-logo:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: #2E3B2E;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 12px;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            background: rgba(46, 59, 46, 0.1);
-            color: #1A2B1A;
-            transform: translateY(-2px);
-        }
-
-        .theme-toggle-desktop {
-            background: #2E3B2E;
-            border: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 18px;
-            cursor: pointer;
-            font-weight: 600;
-            color: #EFE7DA;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(46, 59, 46, 0.2);
-        }
-
-        .theme-toggle-desktop:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(46, 59, 46, 0.3);
-            background: #1A2B1A;
-        }
-
-        /* Dark Mode Styles */
-        body.dark-mode {
-            background: #232B22;
-            color: #EFE7DA;
-        }
-
-        body.dark-mode .navbar {
-            background: #314733;
-            border-bottom: 2px solid #A8BBA2;
-        }
-
-        body.dark-mode .nav-logo,
-        body.dark-mode .nav-link {
-            color: #EFE7DA;
-        }
-
-        body.dark-mode .nav-link:hover,
-        body.dark-mode .nav-link.active {
-            background: rgba(239, 231, 218, 0.15);
-            color: #FFFCEE;
-        }
-
-        body.dark-mode .theme-toggle-desktop {
-            background: #A8BBA2;
-            color: #2E3B2E;
-        }
-
-        body.dark-mode .theme-toggle-desktop:hover {
-            background: #B7CBB2;
-        }
-
-        body.dark-mode .hero-container {
-            background: #314733;
-            border-color: #A8BBA2;
-        }
-
-        body.dark-mode .hero-title,
-        body.dark-mode h2,
-        body.dark-mode h3 {
-            color: #EFE7DA;
-        }
-
-        body.dark-mode .hero-tagline,
-        body.dark-mode .hero-intro,
-        body.dark-mode .section-subtitle,
-        body.dark-mode .expertise-card p,
-        body.dark-mode .card-cta {
-            color: #B7CBB2;
-        }
-
-        body.dark-mode .expertise-card {
-            background: #314733;
-            border-color: #A8BBA2;
-        }
-
-        body.dark-mode .expertise-card:hover {
-            background: #3D5940;
-            border-color: #B7CBB2;
-        }
-
-        body.dark-mode .btn-primary {
-            background: #A8BBA2;
-            color: #2E3B2E;
-        }
-
-        body.dark-mode .btn-primary:hover {
-            background: #B7CBB2;
-        }
-
-        body.dark-mode .btn-secondary {
-            border-color: #EFE7DA;
-            color: #EFE7DA;
-        }
-
-        body.dark-mode .btn-secondary:hover {
-            background: #EFE7DA;
-            color: #2E3B2E;
-        }
-
-        body.dark-mode .footer {
-            background: #1A2B1A;
-        }
-
-        body.dark-mode .email-btn {
-            background: #A8BBA2;
-            color: #2E3B2E;
-        }
-
-        body.dark-mode .email-btn:hover {
-            background: #B7CBB2;
-        }
-
-        .nav-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-
-        .nav-toggle span {
-            width: 25px;
-            height: 3px;
-            background: #2E3B2E;
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-
-        body.dark-mode .nav-toggle span {
-            background: #EFE7DA;
-        }
-
-        .nav-toggle:hover span {
-            background: #1A2B1A;
-        }
-
-        body.dark-mode .nav-toggle:hover span {
-            background: #FFFCEE;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 0;
-            margin: 32px auto;
-            max-width: 1200px;
-        }
-
-        .hero-container {
-            background: linear-gradient(135deg, var(--cream) 0%, var(--beige-dark) 100%);
-            border-radius: 20px;
-            box-shadow: 0 4px 16px rgba(168, 187, 162, 0.12);
-            padding: 48px;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 3rem;
-            align-items: center;
-            border: 2px solid rgba(168, 187, 162, 0.2);
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            color: var(--dark-green);
-        }
-
-        .hero-tagline {
-            font-size: 1.3rem;
-            color: var(--medium-green);
-            margin-bottom: 1rem;
-        }
-
-        .hero-intro {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-        }
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-img {
-            width: 100%;
-            max-width: 220px;
-            border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(49, 71, 51, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 3px solid var(--sage);
-        }
-
-        .hero-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 32px rgba(49, 71, 51, 0.3);
-        }
-
-        .btn-primary {
-            background: linear-gradient(90deg, var(--sage) 0%, var(--sage-light) 100%);
-            color: white;
-            padding: 12px 32px;
-            border-radius: 18px;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: 600;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(168, 187, 162, 0.15);
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(90deg, var(--sage-light) 0%, var(--sage) 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(168, 187, 162, 0.25);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--dark-green);
-            padding: 12px 32px;
-            border-radius: 18px;
-            text-decoration: none;
-            display: inline-block;
-            border: 2px solid var(--dark-green);
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background: var(--dark-green);
-            color: var(--cream);
-        }
-
-        /* Expertise Section */
-        .expertise {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 1rem;
-            color: var(--dark-green);
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            color: var(--text-muted);
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-        }
-
-        .expertise-card {
-            background: #FFFCEE;
-            padding: 32px;
-            border-radius: 20px;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s;
-            box-shadow: 0 4px 16px rgba(168, 187, 162, 0.12);
-            border: 2px solid transparent;
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 24px rgba(168, 187, 162, 0.2);
-            border-color: var(--sage);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .expertise-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--dark-green);
-        }
-
-        .expertise-card p {
-            margin-bottom: 1rem;
-            line-height: 1.7;
-            color: var(--text-muted);
-        }
-
-        .card-cta {
-            color: var(--medium-green);
-            font-weight: 600;
-            display: inline-block;
-            transition: transform 0.3s;
-        }
-
-        .expertise-card:hover .card-cta {
-            transform: translateX(5px);
-        }
-
-        /* Footer */
-        .footer {
-            background: linear-gradient(90deg, #314733 0%, #3D5940 100%);
-            color: #EFE7DA;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-            text-align: center;
-            border-radius: 20px 20px 0 0;
-            box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--cream);
-            text-decoration: none;
-            transition: all 0.3s;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 12px;
-        }
-
-        .footer-links a:hover {
-            background: rgba(255, 252, 238, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .email-btn {
-            background: linear-gradient(90deg, var(--cream) 0%, var(--sage-light) 100%);
-            border: none;
-            padding: 12px 32px;
-            border-radius: 18px;
-            font-weight: 600;
-            color: var(--dark-green);
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(255, 252, 238, 0.15);
-            transition: all 0.3s;
-            font-size: 1rem;
-            margin-top: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .email-btn:hover {
-            background: linear-gradient(90deg, var(--sage-light) 0%, var(--cream) 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(255, 252, 238, 0.25);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-toggle {
-                display: flex;
-            }
-
-            .nav-menu {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem 0;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .theme-toggle-desktop {
-                display: none;
-            }
-
-            .navbar {
-                border-radius: 0;
-            }
-
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-                padding: 32px 24px;
-            }
-
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .hero-tagline {
-                font-size: 1.1rem;
-            }
-
-            .expertise-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-container {
-                padding: 24px 16px;
-            }
-
-            .expertise-card {
-                padding: 24px;
-            }
-
-            .btn-primary, .btn-secondary, .email-btn {
-                width: 100%;
-                text-align: center;
-                justify-content: center;
-            }
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--beige:#F5F5DC;--beige-dark:#EFE7DA;--cream:#FFFCEE;--sage:#A8BBA2;--sage-light:#B7CBB2;--dark-green:#314733;--medium-green:#6D8C6D;--text-muted:#7A8F7A}
+        body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--text-muted);background:linear-gradient(120deg,#A8BBA2 0%,#EDE6D6 100%);background-attachment:fixed;min-height:100vh}
+        h1,h2,h3{font-family:'Playfair Display',serif;color:var(--dark-green)}
+        .navbar{background:#A8BBA2;padding:1rem 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 6px rgba(168,187,162,.09);border-bottom:2px solid #EFE7DA;transition:all .3s}
+        .nav-container{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+        .nav-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:#2E3B2E;text-decoration:none;transition:transform .3s}
+        .nav-logo:hover{transform:scale(1.05)}
+        .nav-menu{display:flex;list-style:none;gap:1rem;align-items:center}
+        .nav-link{color:#2E3B2E;text-decoration:none;transition:all .3s;font-weight:500;padding:.5rem 1rem;border-radius:12px}
+        .nav-link:hover,.nav-link.active{background:rgba(46,59,46,.1);color:#1A2B1A;transform:translateY(-2px)}
+        .theme-toggle-desktop{background:#2E3B2E;border:none;padding:.6rem 1.2rem;border-radius:18px;cursor:pointer;font-weight:600;color:#EFE7DA;transition:all .3s;box-shadow:0 2px 8px rgba(46,59,46,.2)}
+        .theme-toggle-desktop:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(46,59,46,.3);background:#1A2B1A}
+
+        body.dark-mode{background:#232B22;color:#EFE7DA}
+        body.dark-mode .navbar{background:#314733;border-bottom:2px solid #A8BBA2}
+        body.dark-mode .nav-logo,body.dark-mode .nav-link{color:#EFE7DA}
+        body.dark-mode .nav-link:hover,body.dark-mode .nav-link.active{background:rgba(239,231,218,.15);color:#FFFCEE}
+        body.dark-mode .theme-toggle-desktop{background:#A8BBA2;color:#2E3B2E}
+        body.dark-mode .theme-toggle-desktop:hover{background:#B7CBB2}
+        body.dark-mode .hero-container{background:#314733;border-color:#A8BBA2}
+        body.dark-mode .hero-title,body.dark-mode h2,body.dark-mode h3{color:#EFE7DA}
+        body.dark-mode .hero-tagline,body.dark-mode .hero-intro,body.dark-mode .section-subtitle,body.dark-mode .expertise-card p,body.dark-mode .card-cta{color:#B7CBB2}
+        body.dark-mode .expertise-card{background:#314733;border-color:#A8BBA2}
+        body.dark-mode .expertise-card:hover{background:#3D5940;border-color:#B7CBB2}
+        body.dark-mode .btn-primary{background:#A8BBA2;color:#2E3B2E}
+        body.dark-mode .btn-primary:hover{background:#B7CBB2}
+        body.dark-mode .btn-secondary{border-color:#EFE7DA;color:#EFE7DA}
+        body.dark-mode .btn-secondary:hover{background:#EFE7DA;color:#2E3B2E}
+        body.dark-mode .footer{background:#1A2B1A}
+        body.dark-mode .email-btn{background:#A8BBA2;color:#2E3B2E}
+        body.dark-mode .email-btn:hover{background:#B7CBB2}
+
+        .nav-toggle{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer}
+        .nav-toggle span{width:25px;height:3px;background:#2E3B2E;border-radius:2px;transition:all .3s}
+        body.dark-mode .nav-toggle span{background:#EFE7DA}
+
+        .hero{padding:0;margin:32px auto;max-width:1200px}
+        .hero-container{background:linear-gradient(135deg,var(--cream) 0%,var(--beige-dark) 100%);border-radius:20px;box-shadow:0 4px 16px rgba(168,187,162,.12);padding:48px;display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:center;border:2px solid rgba(168,187,162,.2)}
+        .hero-title{font-size:3rem;margin-bottom:.5rem;color:var(--dark-green)}
+        .hero-tagline{font-size:1.3rem;color:var(--medium-green);margin-bottom:1rem}
+        .hero-intro{font-size:1.05rem;line-height:1.8;color:var(--text-muted);margin-bottom:1rem}
+        .hero-img{width:100%;max-width:220px;border-radius:20px;box-shadow:0 8px 24px rgba(49,71,51,.2);transition:transform .3s,box-shadow .3s;border:3px solid var(--sage)}
+        .hero-img:hover{transform:scale(1.05);box-shadow:0 12px 32px rgba(49,71,51,.3)}
+
+        .btn-primary{background:linear-gradient(90deg,var(--sage) 0%,var(--sage-light) 100%);color:white;padding:12px 32px;border-radius:18px;text-decoration:none;display:inline-block;font-weight:600;transition:all .3s;box-shadow:0 2px 8px rgba(168,187,162,.15);border:none;cursor:pointer}
+        .btn-primary:hover{background:linear-gradient(90deg,var(--sage-light) 0%,var(--sage) 100%);transform:translateY(-3px);box-shadow:0 6px 16px rgba(168,187,162,.25)}
+        .btn-secondary{background:transparent;color:var(--dark-green);padding:12px 32px;border-radius:18px;text-decoration:none;display:inline-block;border:2px solid var(--dark-green);font-weight:600;transition:all .3s}
+        .btn-secondary:hover{background:var(--dark-green);color:var(--cream)}
+
+        .expertise{padding:4rem 2rem;max-width:1200px;margin:0 auto}
+        .section-title{font-size:2.5rem;text-align:center;margin-bottom:1rem;color:var(--dark-green)}
+        .section-subtitle{text-align:center;font-size:1.1rem;margin-bottom:3rem;color:var(--text-muted)}
+        .expertise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}
+        .expertise-card{background:#FFFCEE;padding:32px;border-radius:20px;text-decoration:none;color:inherit;transition:all .3s;box-shadow:0 4px 16px rgba(168,187,162,.12);border:2px solid transparent}
+        .expertise-card:hover{transform:translateY(-8px);box-shadow:0 8px 24px rgba(168,187,162,.2);border-color:var(--sage)}
+        .expertise-card h3{font-size:1.5rem;margin-bottom:.75rem;color:var(--dark-green)}
+        .expertise-card p{margin-bottom:1rem;line-height:1.7;color:var(--text-muted)}
+        .card-cta{color:var(--medium-green);font-weight:600;display:inline-block;transition:transform .3s}
+        .expertise-card:hover .card-cta{transform:translateX(5px)}
+
+        .footer{background:linear-gradient(90deg,#314733 0%,#3D5940 100%);color:#EFE7DA;padding:3rem 2rem;margin-top:4rem;text-align:center;border-radius:20px 20px 0 0;box-shadow:0 -4px 16px rgba(0,0,0,.1)}
+        .footer-links a{color:var(--cream);text-decoration:none;transition:all .3s;font-weight:500;padding:.5rem 1rem;border-radius:12px}
+        .footer-links a:hover{background:rgba(255,252,238,.2);transform:translateY(-2px)}
+        .email-btn{background:linear-gradient(90deg,var(--cream) 0%,var(--sage-light) 100%);border:none;padding:12px 32px;border-radius:18px;font-weight:600;color:var(--dark-green);cursor:pointer;box-shadow:0 2px 8px rgba(255,252,238,.15);transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+        .email-btn:hover{transform:translateY(-3px);box-shadow:0 6px 16px rgba(255,252,238,.25)}
+
+        @media (max-width:768px){
+            .nav-toggle{display:flex}
+            .nav-menu{display:none;width:100%;flex-direction:column;padding:1rem 0}
+            .nav-menu.active{display:flex}
+            .theme-toggle-desktop{display:none}
+            .hero-container{grid-template-columns:1fr;text-align:center;padding:32px 24px}
+            .hero-title{font-size:2rem}
+        }
+        @media (max-width:480px){
+            .hero-container{padding:24px 16px}
+            .btn-primary,.btn-secondary,.email-btn{width:100%;justify-content:center}
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">Portfolio</a>
+            <a href="https://celestialdraco6-lab.github.io/" class="nav-logo">Portfolio</a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#" class="nav-link active">Home</a></li>
-                <li><a href="#" class="nav-link">Blog Writing</a></li>
-                <li><a href="#" class="nav-link">Copywriting</a></li>
-                <li><a href="#" class="nav-link">Technical Writing</a></li>
-                <li><a href="#" class="nav-link">Translation</a></li>
-                <li><a href="#" class="nav-link">Case Studies</a></li>
-                <li><a href="#" class="nav-link">Product Descriptions</a></li>
+                <li><a href="https://celestialdraco6-lab.github.io/" class="nav-link active">Home</a></li>
+                <li><a href="blog1.html" class="nav-link">Blog Writing</a></li>
+                <li><a href="copywriting.html" class="nav-link">Copywriting</a></li>
+                <li><a href="technical.html" class="nav-link">Technical Writing</a></li>
+                <li><a href="translation.html" class="nav-link">Translation</a></li>
+                <li><a href="study.html" class="nav-link">Case Studies</a></li>
+                <li><a href="products.html" class="nav-link">Product Descriptions</a></li>
             </ul>
             <button id="themeToggle" class="theme-toggle-desktop" aria-label="Toggle dark mode">Dark Mode</button>
         </div>
@@ -561,16 +118,16 @@
                 <p class="hero-intro">
                     Content writer with demonstrated expertise in product descriptions, blog writing, and strategic copywriting for fashion and lifestyle brands. Skilled at SEO-optimized writing, maintaining brand voice, and delivering research-backed content within tight deadlines. Passionate about translating complex ideas into reader-friendly narratives across platforms.
                 </p>
-                <p class="hero-tagline" style="margin-top: 1rem; font-style: italic;">
+                <p class="hero-tagline" style="margin-top:1rem;font-style:italic;">
                     Turning feedback, questions, and rough drafts into trusted narratives.
                 </p>
-                <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-                    <a href="#" class="btn-primary">📄 Download Resume</a>
+                <div style="display:flex;gap:1rem;margin-top:1.5rem;flex-wrap:wrap;">
+                    <a href="Pragati_Pandey_Resume.pdf" class="btn-primary" download>Download Resume</a>
                     <a href="mailto:celestialdraco6@gmail.com" class="btn-secondary">Contact Me</a>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Crect fill='%23A8BBA2' width='220' height='220'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='80'%3E✍️%3C/text%3E%3C/svg%3E" alt="Pragati Pandey Professional Photo" class="hero-img">
+                <img src="my_image.png" alt="Pragati Pandey" class="hero-img">
             </div>
         </div>
     </header>
@@ -580,40 +137,40 @@
             <div class="container">
                 <h2 class="section-title">Writing Expertise & Samples</h2>
                 <p class="section-subtitle">Explore my work across different writing disciplines. Click any category to view detailed samples.</p>
-                
+               
                 <div class="expertise-grid">
-                    <a href="#" class="expertise-card">
-                        <div class="card-icon">✍️</div>
+                    <a href="blog1.html" class="expertise-card">
+                        <div class="card-icon">Pen</div>
                         <h3>Blog Writing</h3>
                         <p>Engaging, SEO-optimized blog posts that inform and inspire readers while driving organic traffic.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
-                    <a href="#" class="expertise-card">
-                        <div class="card-icon">📝</div>
+                    <a href="copywriting.html" class="expertise-card">
+                        <div class="card-icon">Pen</div>
                         <h3>Copywriting</h3>
                         <p>Persuasive copy that converts browsers into buyers with compelling messaging and clear calls-to-action.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
-                    <a href="#" class="expertise-card">
-                        <div class="card-icon">🔧</div>
+                    <a href="technical.html" class="expertise-card">
+                        <div class="card-icon">Tools</div>
                         <h3>Technical Writing</h3>
                         <p>Clear, accurate documentation that makes complex technical concepts accessible to any audience.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
-                    <a href="#" class="expertise-card">
-                        <div class="card-icon">🌍</div>
+                    <a href="translation.html" class="expertise-card">
+                        <div class="card-icon">Globe</div>
                         <h3>Translation</h3>
                         <p>Precise, culturally-aware translations that maintain meaning and tone across languages.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
-                    <a href="#" class="expertise-card">
-                        <div class="card-icon">📊</div>
+                    <a href="study.html" class="expertise-card">
+                        <div class="card-icon">Chart</div>
                         <h3>Case Studies</h3>
                         <p>Data-driven narratives showcasing client success stories with measurable results and insights.</p>
                         <span class="card-cta">View Samples →</span>
                     </a>
-                    <a href="#" class="expertise-card">
-                        <div class="card-icon">🛍️</div>
+                    <a href="products.html" class="expertise-card">
+                        <div class="card-icon">Shopping Bag</div>
                         <h3>Product Descriptions</h3>
                         <p>Captivating product copy that highlights benefits and drives purchasing decisions.</p>
                         <span class="card-cta">View Samples →</span>
@@ -627,8 +184,7 @@
         <div class="footer-container">
             <p>© 2025 Pragati Pandey. All rights reserved.</p>
             <button class="email-btn" onclick="window.location.href='mailto:celestialdraco6@gmail.com'">
-                <span>📧</span>
-                <span>Email Me</span>
+                <span>Email</span> <span>Email Me</span>
             </button>
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener">LinkedIn Profile</a>
@@ -637,34 +193,24 @@
     </footer>
 
     <script>
-        // Mobile navigation toggle
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-        
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+        const navToggle=document.getElementById('navToggle');
+        const navMenu=document.getElementById('navMenu');
+        navToggle.addEventListener('click',()=>navMenu.classList.toggle('active'));
 
-        // Dark mode toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        
-        // Check for saved theme preference or default to light mode
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        if (currentTheme === 'dark') {
+        const themeToggle=document.getElementById('themeToggle');
+        const currentTheme=localStorage.getItem('theme')||'light';
+        if(currentTheme==='dark'){
             document.body.classList.add('dark-mode');
-            themeToggle.textContent = 'Light Mode';
+            themeToggle.textContent='Light Mode';
         }
-        
-        themeToggle.addEventListener('click', () => {
+        themeToggle.addEventListener('click',()=>{
             document.body.classList.toggle('dark-mode');
-            
-            // Update button text and save preference
-            if (document.body.classList.contains('dark-mode')) {
-                themeToggle.textContent = 'Light Mode';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeToggle.textContent = 'Dark Mode';
-                localStorage.setItem('theme', 'light');
+            if(document.body.classList.contains('dark-mode')){
+                themeToggle.textContent='Light Mode';
+                localStorage.setItem('theme','dark');
+            }else{
+                themeToggle.textContent='Dark Mode';
+                localStorage.setItem('theme','light');
             }
         });
     </script>
