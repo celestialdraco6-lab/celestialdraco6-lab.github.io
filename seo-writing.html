@@ -81,6 +81,42 @@
             color: #2A2420; font-weight: 700; text-decoration: underline;
         }
 
+        /* Full article (added) */
+        .toggle-article-btn {
+            display: inline-block; background: var(--gold); color: #3A2F2F; border: none;
+            padding: 0.8rem 1.9rem; border-radius: 30px; font-weight: 600; cursor: pointer;
+            font-size: 0.98rem; box-shadow: var(--shadow-sm); transition: all 0.3s ease; margin-top: 0.5rem;
+        }
+        .toggle-article-btn:hover { background: var(--gold-dark); transform: translateY(-2px); }
+        .full-article {
+            margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);
+        }
+        .full-article h3.article-title { font-size: 1.8rem; margin-bottom: 1.3rem; line-height: 1.3; }
+        .full-article h4 { font-size: 1.3rem; margin: 2rem 0 0.9rem; color: var(--text-primary); }
+        .full-article p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.8; }
+        .full-article ul { margin: 0 0 1.2rem 1.4rem; color: var(--text-secondary); }
+        .full-article li { margin-bottom: 0.5rem; line-height: 1.6; }
+        .full-article strong { color: var(--text-primary); }
+        .key-takeaways {
+            background: var(--bg-secondary); border-left: 3px solid var(--sage); border-radius: 8px;
+            padding: 1.4rem 1.7rem; margin: 1.3rem 0 1.8rem;
+        }
+        .key-takeaways p.kt-label { margin-bottom: 0.9rem; font-weight: 700; color: var(--text-primary); }
+        .key-takeaways ul { margin-bottom: 0; }
+        .pricing-table {
+            width: 100%; border-collapse: collapse; margin: 1.3rem 0 1.8rem; font-size: 0.93rem;
+        }
+        .pricing-table th, .pricing-table td {
+            border: 1px solid var(--border-color); padding: 0.7rem 0.9rem; text-align: left; color: var(--text-secondary);
+        }
+        .pricing-table th { background: var(--bg-secondary); color: var(--text-primary); font-weight: 700; }
+        .faq-item { margin-bottom: 1.4rem; }
+        .faq-item h4 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+        .article-source-note {
+            font-size: 0.88em; color: var(--text-muted); font-style: italic; margin-top: 1.8rem;
+            padding: 1rem; background: var(--bg-secondary); border-left: 3px solid var(--gold); border-radius: 4px;
+        }
+
         @media (max-width: 768px) {
             .sample-page h1 { font-size: 2rem; }
             .sample-block { padding: 1.5rem; }
@@ -148,6 +184,128 @@
                     than as separate steps. Written to a detailed brief with strict formatting, SEO,
                     and image requirements, it was the deciding submission in a hiring screening I passed.
                 </p>
+
+                <button class="toggle-article-btn" id="toggleArticleBtn" type="button" aria-expanded="false" aria-controls="fullArticle">
+                    Read the Full Article ↓
+                </button>
+
+                <div class="full-article" id="fullArticle" style="display:none;">
+                    <h3 class="article-title">How to Generate App Store Screenshots Using a Template in AppLaunchpad</h3>
+
+                    <p>Most users don't read your app description. They just scroll through your app store screenshots and decide whether to download or not in under 5 seconds.</p>
+                    <p>Even if your app is good, generic or unpolished screenshots can affect the downloads. That's exactly what AppLaunchpad is built to fix.</p>
+                    <p>This guide walks you through every step of using AppLaunchpad, the fastest app store screenshot generator built for developers and founders, from picking an iPhone screenshot template to downloading your final screens.</p>
+
+                    <div class="key-takeaways">
+                        <p class="kt-label">Key Takeaways</p>
+                        <ul>
+                            <li><strong>No design skills needed:</strong> AppLaunchpad's drag-and-drop editor handles the heavy lifting.</li>
+                            <li><strong>Start in minutes:</strong> Pre-built iPhone screenshot templates mean you skip the blank canvas.</li>
+                            <li><strong>Auto-export:</strong> AppLaunchpad sizes your screenshots to every App Store requirement automatically.</li>
+                            <li><strong>Free plan available:</strong> Test with 10 templates and 100+ assets at zero cost.</li>
+                            <li><strong>Widely trusted:</strong> AppLaunchpad is used by developers and founders across the App Store and Google Play.</li>
+                        </ul>
+                    </div>
+
+                    <h4>What Is AppLaunchpad?</h4>
+                    <p>AppLaunchpad is a web-based app store screenshot generator trusted by over 1 million apps worldwide. Developers, marketers, and founders use it to create professional-looking app store screenshots without touching Figma or Photoshop.</p>
+                    <p>It also removes all the setup work, letting you start with a proven iPhone screenshot template instead of a blank canvas. That means you can generate app store screenshots in just one session, instead of waiting for a week.</p>
+                    <p>You get a library of pre-built iPhone screenshot templates, a drag-and-drop editor, and one-click export in every required resolution. The whole thing runs in your browser. Here's what makes AppLaunchpad stand out as an app store screenshot generator:</p>
+                    <ul>
+                        <li>500+ iPhone screenshot templates to choose from (Pro plan)</li>
+                        <li>10,000+ design assets: icons, illustrations, badges, and 3D device frames</li>
+                        <li>Auto-scaling to all App Store required sizes, so no manual resizing is required</li>
+                        <li>AI localisation to generate app store screenshots in multiple languages</li>
+                        <li>Supports all the latest iPhones and iPad models out of the box</li>
+                    </ul>
+                    <p>Every template is pre-sized to current Apple requirements. No guesswork on dimensions.</p>
+
+                    <h4>How to Generate App Store Screenshots: Step-by-Step Guide</h4>
+                    <p>Below are the 9 steps that will help you to generate app store screenshots with an iPhone screenshot template in AppLaunchpad. The whole process takes around 30 minutes.</p>
+
+                    <p><strong>1. Create a Free Account</strong> — Go to theapplaunchpad.com and sign up with your email or Google account to create a free account. Once inside, click "Create a design" from your dashboard. This opens the template gallery where you can browse iPhone screenshot templates.</p>
+
+                    <p><strong>2. Choose an iPhone Pre-Built Template</strong> — Filter the template gallery by iPhone to see all available iPhone screenshot templates. The default size is iPhone 6.9", which matches the latest iPhone models and meets current App Store requirements. Pick a template that fits your app's style, then click "Use This Template" to load it in the editor. For a different iPhone size, click "More Screenshot Sizes" inside the editor to pick any supported model, from the iPhone SE to the latest iPhone Pro Max — choosing the correct size upfront helps prevent rejection errors in App Store Connect.</p>
+
+                    <p><strong>3. Upload Your App Screenshots</strong> — Click on the device frame in the editor, and the upload button will appear. Click it and select your screenshot from your computer. No need to worry about the screenshot size, since AppLaunchpad will automatically fit it into the device frame. Make sure to use high-resolution PNG files exported from your app or Xcode simulator, and try to avoid blurry screenshots.</p>
+
+                    <p><strong>4. Add a Caption</strong> — Click the text element in the template to edit it. Replace the placeholder with your own caption. The best captions are short, specific, and benefit-driven.</p>
+                    <p><strong>Good caption examples:</strong></p>
+                    <ul>
+                        <li>"Track habits in under 10 seconds"</li>
+                        <li>"Never miss a payment again."</li>
+                        <li>"Your finances, finally organised."</li>
+                    </ul>
+                    <p>If a text element doesn't fit your design, delete it entirely. Not every template slot needs to be filled — less clutter means more focus on the app.</p>
+
+                    <p><strong>5. Style Your Caption</strong> — Once your captions are in place, style them: font family (standard on Free, 500+ premium fonts on Pro), font size, text colour to match your brand palette, alignment, and bold/italic sparingly to stress key words. A strong, readable caption on a well-chosen template grabs attention before the viewer even looks at the screen inside the device frame.</p>
+
+                    <p><strong>6. Customise the Background</strong> — The background ties your entire app store screenshot together. You get three options: a solid colour (clean and minimal), a gradient (smooth blend between two colours), or a custom image upload for a fully customised look. Use brand colours from your app's design system and keep them consistent across all screenshots.</p>
+
+                    <p><strong>7. Add Elements</strong> — The Elements tab gives you a full library of design extras: 2,000+ icons to match your app's theme, shapes and frames like arrows and borders, and 10,000+ illustrations on Pro. Drag any element onto the canvas and try not to overload the screen — one or two strong elements per screenshot is usually enough.</p>
+
+                    <p><strong>8. Add Custom Images</strong> — Besides the built-in elements, you can upload your own images directly into the editor — your app icon, product photo, mascot, or any branded visual. PNG with a transparent background works best since it overlays cleanly without needing a white box around it.</p>
+
+                    <p><strong>9. Preview and Download Your Screenshots</strong> — Preview all your screenshots side by side and check that font, colour, and layout stay consistent across every slide. Click "Download" to get your screenshots as JPEG or PNG — AppLaunchpad auto-generates all required App Store sizes in one download. Download as PNG for the sharpest quality, or JPEG if file size matters.</p>
+
+                    <p>Before you export, run a quick final check. Generate screenshots for your three most important features first, build those until they're tight, then expand to a full set of 5 to 8 slides.</p>
+
+                    <h4>AppLaunchpad Pricing: Free vs Pro</h4>
+                    <p>AppLaunchpad runs on a freemium model. Here's the full breakdown:</p>
+                    <table class="pricing-table">
+                        <tr><th>Feature</th><th>Free Plan</th><th>Pro Plan</th></tr>
+                        <tr><td>Price</td><td>₹0/month</td><td>₹650/month (billed annually)</td></tr>
+                        <tr><td>Templates</td><td>10 professionally designed</td><td>1,000+ professionally designed</td></tr>
+                        <tr><td>Graphics &amp; assets</td><td>100+ graphics</td><td>5,000+ graphics incl. 3D devices</td></tr>
+                        <tr><td>Fonts</td><td>70+ fonts, 100 layouts</td><td>700+ fonts, 100+ layouts</td></tr>
+                        <tr><td>Export sizes</td><td>Limited exports</td><td>Unlimited exports — all iOS &amp; Android sizes</td></tr>
+                        <tr><td>Latest device support</td><td>Standard devices</td><td>Latest iPhone 17, iPad Pro &amp; more</td></tr>
+                        <tr><td>AI localization</td><td>Not included</td><td>AI translator for multiple languages</td></tr>
+                        <tr><td>Support</td><td>Standard</td><td>Priority + online customer support</td></tr>
+                    </table>
+                    <p>The Free plan is a solid starting point, especially for beginners who want to test the tool before committing. The Pro plan, at ₹650/month billed annually, unlocks 1,000+ templates, 5,000+ assets, unlimited exports, localisation, and priority support — for teams running ongoing ASO or launching multiple apps, it pays for itself quickly.</p>
+
+                    <h4>Tips to Make Your App Store Screenshots Convert</h4>
+                    <ul>
+                        <li><strong>Lead with your strongest feature.</strong> Your first screenshot should immediately answer "What does this app do?" Don't save the best for slide 3.</li>
+                        <li><strong>Run variations.</strong> AppLaunchpad lets you duplicate a project and swap captions or backgrounds in minutes — test two versions of your first screenshot with the same screen but a different headline.</li>
+                        <li><strong>Refresh your template after every major update.</strong> Outdated screens signal an unmaintained app to anyone browsing the store.</li>
+                        <li><strong>Write captions as outcomes, not features.</strong> "Never miss a bill" beats "Bill reminder feature."</li>
+                        <li><strong>Keep the visual style consistent.</strong> Same font, same background palette, same layout logic across all screenshots.</li>
+                        <li><strong>Use the template as a guide, not a cage.</strong> Drag, resize, and adjust everything to make it yours.</li>
+                        <li><strong>Test your set before submitting.</strong> High-resolution, high-quality screenshots improve conversion rates significantly, and AppLaunchpad ensures every export meets the required resolution automatically.</li>
+                    </ul>
+
+                    <h4>Frequently Asked Questions</h4>
+                    <div class="faq-item">
+                        <h4>1. How Many App Store Screenshots Do I Need for iPhone?</h4>
+                        <p>Apple requires a minimum of 1 screenshot but recommends using all 10 available slots. Most top-performing apps use 5 to 8 screenshots, each highlighting a distinct feature or benefit.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>2. What Size Should App Store Screenshots Be for iPhone?</h4>
+                        <p>For the latest iPhones, the required size is 1290 x 2796 pixels (iPhone 6.9"). AppLaunchpad handles this automatically, so there's no need for manual resizing.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>3. Can I Use AppLaunchpad for Both App Store and Google Play?</h4>
+                        <p>Yes. AppLaunchpad supports both iOS and Android, and you can switch between device types in the editor and export for both platforms from a single project.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>4. Is AppLaunchpad Free to Use?</h4>
+                        <p>Yes — the free plan includes 10 iPhone screenshot templates and 100+ graphics. Full access to 500+ templates and 10,000+ design assets starts at ₹650/month on the Pro plan. No credit card is needed to try the free plan.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>5. Can I Localise My App Store Screenshots Into Multiple Languages?</h4>
+                        <p>Yes, localisation is a Pro plan feature. AppLaunchpad uses AI to translate caption text and automatically adjusts the layout for different language lengths.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>6. Do I Need Design Skills to Use AppLaunchpad?</h4>
+                        <p>No. The template library and drag-and-drop editor mean you can go from blank canvas to download-ready screenshots without any graphic design knowledge.</p>
+                    </div>
+
+                    <p class="article-source-note">
+                        Sources cited in the original piece: StoreMaven's App Store Optimization research on screenshot conversion impact, Apple Developer Documentation on screenshot specifications, and AppLaunchpad's official product page.
+                    </p>
+                </div>
             </div>
 
             <!-- Live published work -->
@@ -230,6 +388,15 @@
                 localStorage.setItem('theme', 'dark');
             }
             updateToggleLabel();
+        });
+
+        const toggleBtn = document.getElementById('toggleArticleBtn');
+        const fullArticle = document.getElementById('fullArticle');
+        toggleBtn.addEventListener('click', () => {
+            const isHidden = fullArticle.style.display === 'none';
+            fullArticle.style.display = isHidden ? 'block' : 'none';
+            toggleBtn.textContent = isHidden ? 'Hide Full Article ↑' : 'Read the Full Article ↓';
+            toggleBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
         });
     </script>
 </body>
