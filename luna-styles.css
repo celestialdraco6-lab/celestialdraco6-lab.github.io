@@ -1,0 +1,286 @@
+/* ========================================
+   LUNA ESSENCE STUDIOS — PROFESSIONAL THEME
+   ======================================== */
+
+:root {
+    /* Core palette, pulled from the site's existing look */
+    --charcoal: #2B2B2B;        /* Navbar / dark backgrounds */
+    --charcoal-light: #3D3D3D;
+    --blush: #D9A9A6;           /* Original accent, kept for photos/borders */
+    --blush-dark: #B97F7C;      /* Deepened for buttons — passes contrast w/ white text */
+    --cream: #FDFBF9;           /* Content card background */
+    --sand: #F3EDE7;            /* Page background, warm off-white */
+    --text-primary: #262220;    /* Near-black warm gray, not pure black */
+    --text-secondary: #55504C;
+    --text-on-dark: #FFFFFF;
+    --text-on-blush: #FFFFFF;
+    --border-color: #E4DAD2;
+    --shadow-sm: 0 2px 8px rgba(43, 43, 43, 0.08);
+    --shadow-md: 0 6px 20px rgba(43, 43, 43, 0.12);
+    --shadow-lg: 0 12px 32px rgba(43, 43, 43, 0.18);
+}
+
+/* Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--sand);
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--text-primary);
+    font-weight: 700;
+    line-height: 1.2;
+}
+a { text-decoration: none; color: inherit; }
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+.navbar {
+    background: var(--charcoal);
+    padding: 1rem 3rem;
+}
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.nav-logo-badge {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--blush);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--charcoal);
+    font-size: 1.1rem;
+    border: 3px solid var(--charcoal-light);
+}
+
+/* Nav menu — high contrast on both states */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    background: var(--cream);
+    border-radius: 4px;
+    overflow: hidden;
+    flex: 1;
+}
+.nav-link {
+    display: block;
+    padding: 1.2rem 2rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1.05rem;
+    text-align: center;
+    flex: 1;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+.nav-link:hover {
+    background: var(--border-color);
+}
+.nav-link.active {
+    background: var(--charcoal);
+    color: var(--text-on-dark);
+    font-weight: 600;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+    position: relative;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+.hero::before {
+    /* Subtle scrim so hero text areas stay readable over any photo */
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.15) 100%);
+}
+.hero-card {
+    position: relative;
+    z-index: 1;
+    background: var(--cream);
+    max-width: 620px;
+    margin-left: 8%;
+    padding: 3.5rem 3rem;
+    box-shadow: var(--shadow-lg);
+}
+.hero-title {
+    font-size: 3.2rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.25rem;
+}
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ========================================
+   BUTTONS — contrast-checked
+   ======================================== */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--blush-dark);      /* Deepened from original for AA contrast with white text */
+    color: var(--text-on-blush);
+    padding: 1rem 2.25rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover {
+    background: #A56C69;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--charcoal);
+    padding: 1rem 2.25rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border: 2px solid var(--charcoal);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+    background: var(--charcoal);
+    color: var(--text-on-dark);
+}
+
+/* ========================================
+   SOCIAL RAIL
+   ======================================== */
+.social-rail {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 10;
+}
+.social-rail a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.25s ease;
+}
+.social-rail a:hover {
+    background: var(--charcoal);
+    color: var(--text-on-dark);
+    transform: translateY(-3px);
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+.section {
+    padding: 6rem 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+.section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+    font-size: 1.1rem;
+}
+
+/* Portfolio / service cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.card {
+    background: var(--cream);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.35s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+.card-media {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--border-color);
+    object-fit: cover;
+    display: block;
+}
+.card-body { padding: 1.75rem; }
+.card-body h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.card-body p { color: var(--text-secondary); font-size: 0.98rem; }
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background: var(--charcoal);
+    color: var(--text-on-dark);
+    padding: 3rem;
+    text-align: center;
+}
+.footer a { color: var(--blush); }
+.footer a:hover { text-decoration: underline; }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 900px) {
+    .navbar { padding: 1rem 1.5rem; }
+    .nav-container { flex-wrap: wrap; gap: 1rem; }
+    .nav-menu { flex-wrap: wrap; }
+    .nav-link { padding: 0.9rem 1rem; font-size: 0.95rem; }
+    .hero-card { margin: 0 1.25rem; padding: 2.5rem 1.75rem; }
+    .hero-title { font-size: 2.2rem; }
+    .section { padding: 4rem 1.5rem; }
+}
