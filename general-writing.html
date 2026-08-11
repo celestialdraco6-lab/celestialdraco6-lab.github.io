@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="General writing samples by Pragati Pandey - blog, technical, and translation work showing range across formats and subjects.">
+    <meta property="og:title" content="General Writing Samples | Pragati Pandey">
+    <meta property="og:description" content="Blog, technical, and translation samples showing range beyond SEO-focused work.">
+    <meta property="og:type" content="website">
+    <title>General Writing Samples – Pragati Pandey</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+    <style>
+        .sample-page { padding: 2rem 0 4rem; min-height: 100vh; }
+        .back-link {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            color: var(--gold-dark); font-weight: 600; margin-bottom: 2rem; transition: all 0.3s ease;
+        }
+        .back-link:hover { color: var(--sage); transform: translateX(-4px); }
+        .sample-page h1 { font-size: 2.75rem; margin-bottom: 1rem; letter-spacing: -1px; }
+        .sample-page > .container > p.lede {
+            color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin-bottom: 3rem;
+        }
+
+        .writing-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;
+            max-width: 420px;
+        }
+        .writing-card {
+            background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px;
+            padding: 2.2rem; box-shadow: var(--shadow-sm); transition: all 0.3s ease;
+            display: flex; flex-direction: column;
+        }
+        .writing-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--blush); }
+        .writing-card .icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
+        .writing-card h2 { font-size: 1.4rem; margin-bottom: 0.6rem; }
+        .writing-card p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem; flex-grow: 1; }
+        .writing-card a.view-link {
+            color: var(--gold-dark); font-weight: 600; text-decoration: none; margin-top: auto;
+        }
+        .writing-card a.view-link:hover { color: var(--sage); }
+
+        .note-box {
+            margin-top: 3rem; padding: 1.4rem 1.6rem; background: var(--bg-secondary);
+            border-left: 3px solid var(--sage); border-radius: 4px; color: var(--text-muted);
+            font-size: 0.95rem; font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .sample-page h1 { font-size: 2rem; }
+            .writing-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Pragati Pandey</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="seo-writing.html" class="nav-link">SEO Writing</a></li>
+                <li><a href="case-study.html" class="nav-link">SEO Case Studies</a></li>                <li><a href="products.html" class="nav-link">Product Descriptions</a></li>
+                <li><a href="general-writing.html" class="nav-link active">General Writing</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="sample-page">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+            <h1>General Writing Samples</h1>
+            <p class="lede">
+                A translation sample, kept here to show range outside SEO. My current focus is
+                SEO and AEO content; the case studies and SEO writing samples are the best
+                reflection of that work.
+            </p>
+
+            <div class="writing-grid">
+                <div class="writing-card">
+                    <div class="icon">🌐</div>
+                    <h2>Translation</h2>
+                    <p>
+                        Translation work demonstrating attention to tone and meaning across
+                        languages, not just literal conversion.
+                    </p>
+                    <a href="translation.html" class="view-link">View Sample →</a>
+                </div>
+            </div>
+
+            <p class="note-box">
+                This sample predates my move into SEO and AEO - kept here for range, not as
+                a representation of current focus.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Pragati Pandey. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/pragati-pandey-0b9a301a8/" target="_blank" rel="noopener">Let's Connect</a>
+                <a href="mailto:celestialdraco6@gmail.com">Chat With Me</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
