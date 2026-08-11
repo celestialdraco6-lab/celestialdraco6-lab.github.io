@@ -58,6 +58,23 @@
             border-radius: 4px;
         }
 
+        .evidence-block { margin-top: 2rem; }
+        .evidence-block h3 {
+            font-size: 1.05rem; color: var(--sage); margin-bottom: 1rem;
+            text-transform: uppercase; letter-spacing: 0.05em; font-family: 'Inter', sans-serif; font-weight: 700;
+        }
+        .evidence-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem;
+        }
+        .evidence-shot {
+            background: #000; border: 1px solid var(--border-color); border-radius: 12px;
+            overflow: hidden; box-shadow: var(--shadow-sm);
+        }
+        .evidence-shot img { width: 100%; display: block; }
+        .evidence-shot .caption {
+            padding: 0.9rem 1.1rem; font-size: 0.85rem; color: var(--text-muted); background: var(--bg-secondary);
+        }
+
         @media (max-width: 768px) {
             .sample-page h1 { font-size: 2rem; }
             .case-block { padding: 1.5rem; }
@@ -77,6 +94,7 @@
                 <li><a href="case-study.html" class="nav-link active">SEO Case Studies</a></li>
                 <li><a href="copywriting.html" class="nav-link">Copywriting</a></li>
                 <li><a href="products.html" class="nav-link">Product Descriptions</a></li>
+                <li><a href="general-writing.html" class="nav-link">General Writing</a></li>
             </ul>
         </div>
     </nav>
@@ -88,7 +106,7 @@
             <h1>SEO Case Studies</h1>
             <p class="lede">
                 Real outcomes from live client work at AST Consulting, backed by Google Search
-                Console data and AI-visibility tracking — not estimates or projections.
+                Console data and AI-visibility tracking - not estimates or projections.
             </p>
 
             <!-- Case study 1: d2cbot GSC growth -->
@@ -119,7 +137,7 @@
                 </ul>
                 <p class="caveat">
                     Site-wide average search position sits at 10.2 (page 2, approaching page 1)
-                    — reported honestly here as an in-progress metric, not a completed result.
+                    - reported honestly here as an in-progress metric, not a completed result.
                 </p>
             </div>
 
@@ -136,25 +154,51 @@
                 </div>
 
                 <p>
-                    Ran a high-volume, keyword-first content operation for Freecultr — over 150
+                    Ran a high-volume, keyword-first content operation for Freecultr - over 150
                     SEO-optimized blog posts published across 8 weeks, each built around a specific
                     commercial keyword (e.g. "best bamboo fabric underwear," "seamless panties for
                     women," "top 10 underwear brands in India"), using consistent buying-guide,
                     comparison, and explainer formats.
                 </p>
                 <p>
-                    Alongside this, I lead Answer Engine Optimization (AEO) for the brand —
-                    tracking how Freecultr surfaces in AI-generated answers (ChatGPT, Perplexity)
-                    for product-related queries, then creating and optimizing content to improve
-                    that visibility. Through weekly tracking, Freecultr holds Page 1 rankings for
-                    13+ core keywords and appears in ChatGPT answers or source citations for 20+
-                    tracked product-intent queries.
+                    Alongside this, I lead Answer Engine Optimization (AEO) for the brand -
+                    tracking how Freecultr surfaces in AI-generated answers (primarily ChatGPT,
+                    also monitored on Perplexity) for product-related queries, then creating and
+                    optimizing content to improve that visibility. Through weekly tracking,
+                    Freecultr holds Page 1 rankings for 13+ core keywords and appears in ChatGPT
+                    answers or source citations for 20+ tracked product-intent queries.
                 </p>
                 <ul class="work-list">
                     <li>Long-tail keyword research and daily content targeting</li>
                     <li>25+ product-related keywords tracked weekly for AI-search visibility</li>
                     <li>Content structure and messaging optimized specifically for AI citation</li>
                 </ul>
+
+                <div class="evidence-block">
+                    <h3>AI Visibility Evidence</h3>
+                    <div class="evidence-grid">
+                        <div class="evidence-shot">
+                            <img src="assets/aeo-visibility-1.png" alt="ChatGPT answer for 'printed underwear for men' naming Freecultr alongside XYXX, DaMENSCH, and Jockey">
+                            <div class="caption">Freecultr named alongside XYXX, DaMENSCH, and Jockey in a ChatGPT answer for "printed underwear for men."</div>
+                        </div>
+                        <div class="evidence-shot">
+                            <img src="assets/aeo-visibility-2.png" alt="ChatGPT comparison table including a Freecultr product alongside Jockey, XYXX, and Heelium">
+                            <div class="caption">Freecultr's micro-modal trunk surfaced in a ChatGPT comparison table against Jockey, XYXX, and Heelium.</div>
+                        </div>
+                        <div class="evidence-shot">
+                            <img src="assets/aeo-visibility-3.png" alt="ChatGPT source panel citing a Freecultr blog post first for 'Best Bamboo Fabric Underwear'">
+                            <div class="caption">freecultr.com cited as the top source for "Best Bamboo Fabric Underwear," ahead of established review sites.</div>
+                        </div>
+                        <div class="evidence-shot">
+                            <img src="assets/aeo-visibility-4.png" alt="ChatGPT source panel citing a Freecultr blog post first for 'branded underwear for men', ahead of British GQ and GQ">
+                            <div class="caption">freecultr.com ranked as the top cited source for "branded underwear for men," ahead of British GQ and GQ.</div>
+                        </div>
+                        <div class="evidence-shot">
+                            <img src="assets/aeo-visibility-5.png" alt="ChatGPT answer naming FREECULTR as a top budget pick alongside Jockey and Van Heusen">
+                            <div class="caption">FREECULTR named directly in a ChatGPT answer as a top budget pick alongside Jockey and Van Heusen.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
