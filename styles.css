@@ -133,6 +133,62 @@ a { color: inherit; }
 }
 .hero-img:hover { transform: scale(1.03) rotate(-1deg); }
 
+/* ===== Certifications strip ===== */
+.certifications {
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cert-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.cert-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cert-badge {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.9rem 1.3rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.cert-badge:hover {
+    border-color: var(--blush-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cert-title {
+    font-weight: 600;
+    color: var(--gold-dark);
+    font-size: 0.95rem;
+}
+
+.cert-issuer {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .cert-row { flex-direction: column; }
+}
+
 /* ===== Expertise / cards grid ===== */
 .expertise { padding: 5rem 2rem 6rem; }
 .section-title {
