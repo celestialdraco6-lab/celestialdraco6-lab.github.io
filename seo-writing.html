@@ -8,6 +8,12 @@
     <meta property="og:description" content="Real, published SEO content showing keyword strategy, on-page structure, and search-intent-driven writing.">
     <meta property="og:type" content="website">
     <title>SEO Writing Samples – Pragati Pandey</title>
+    <script>
+        (function() {
+            const saved = localStorage.getItem('theme') || 'light';
+            if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,6 +99,7 @@
                 <li><a href="seo-writing.html" class="nav-link active">SEO Writing</a></li>
                 <li><a href="case-study.html" class="nav-link">SEO Case Studies</a></li>                <li><a href="products.html" class="nav-link">Product Descriptions</a></li>
             </ul>
+            <button id="themeToggle" class="theme-toggle-desktop">Dark Mode</button>
         </div>
     </nav>
 
@@ -203,8 +210,26 @@
     </footer>
 
     <script>
-        document.getElementById('navToggle').addEventListener('click', () => {
+        document.getElementById('navToggle')?.addEventListener('click', () => {
             document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        const themeToggle = document.getElementById('themeToggle');
+        function updateToggleLabel() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        }
+        updateToggleLabel();
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            updateToggleLabel();
         });
     </script>
 </body>
