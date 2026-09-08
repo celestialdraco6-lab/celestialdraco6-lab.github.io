@@ -205,7 +205,80 @@
                     </div>
                 </div>
             </div>
+<!-- Case study 3: Conscious Chemist independent audit -->
+            <div class="case-block">
+                <span class="eyebrow">Technical SEO + AEO Audit</span>
+                <h2>Independent Technical SEO &amp; AEO Audit: Conscious Chemist</h2>
+                <p class="role">Self-directed audit · consciouschemist.com (Shark Tank India–featured D2C skincare brand, Shopify)</p>
 
+                <p>
+                    A self-initiated audit, not client work - I picked a real, active D2C site on
+                    purpose, one with real complexity (280+ images on the homepage alone) rather
+                    than something spotless, specifically to demonstrate audit judgment on the
+                    kind of messy site an in-house or agency SEO role actually involves. I scoped
+                    the review, chose the tools, and wrote the findings myself.
+                </p>
+
+                <div class="stat-row">
+                    <div class="stat-card"><div class="num">92 / 281</div><div class="label">Homepage images missing alt text</div></div>
+                    <div class="stat-card"><div class="num">3.9s / 518ms / 0.27</div><div class="label">Mobile LCP / INP / CLS, collection page (failing)</div></div>
+                    <div class="stat-card"><div class="num">0 / 4</div><div class="label">Test queries citing the brand's own site</div></div>
+                </div>
+
+                <p>
+                    <strong>Technical:</strong> Mobile Core Web Vitals fail and worsen deeper into
+                    the site - the homepage sits at LCP 2.8s / INP 448ms (needs improvement), but
+                    a promo-heavy collection page drops into the failing red zone across all three
+                    metrics (LCP 3.9s, INP 518ms, CLS 0.27), most likely from late-loading
+                    countdown timers and offer banners shifting content. Alt-text coverage is
+                    inconsistent at scale (92 of 281 homepage images, 67 of 624 on a collection
+                    page), and sale messaging - "Buy 2 Get 2," countdown badges - is baked into
+                    non-crawlable images instead of text.
+                </p>
+                <p>
+                    <strong>AEO:</strong> I ran four real queries - a category search, a
+                    sensitive-skin question, a head-to-head brand comparison, and a reviews query -
+                    through ChatGPT and Perplexity. Neither engine cited consciouschemist.com
+                    directly in any of the four. Even the brand's own product comparison pulled
+                    spec numbers from 1mg and Flipkart instead of the brand's site, and the reviews
+                    query surfaced a Reddit thread titled "Conscious Chemist ruined my face" that
+                    visibly shaped part of ChatGPT's verdict.
+                </p>
+
+                <ul class="work-list">
+                    <li>Full on-page crawl: title/meta length, schema, alt-text and internal-link audits</li>
+                    <li>Google PageSpeed Insights on mobile and desktop, homepage and collection page</li>
+                    <li>Domain Rating check via Ahrefs toolbar (35); manual robots.txt / sitemap.xml review</li>
+                    <li>Four live query tests across ChatGPT and Perplexity to assess AI-answer visibility</li>
+                </ul>
+
+                <div class="evidence-block">
+                    <h3>Audit Evidence</h3>
+                    <div class="evidence-grid">
+                        <div class="evidence-shot">
+                            <img src="assets/audit-cwv-mobile.png" alt="Google PageSpeed Insights mobile report for a Conscious Chemist collection page showing failing Core Web Vitals: LCP 3.9s, INP 518ms, CLS 0.27">
+                            <div class="caption">PageSpeed Insights, mobile: LCP 3.9s, INP 518ms, CLS 0.27 - all three in the failing range on a promo-heavy collection page.</div>
+                        </div>
+                        <div class="evidence-shot">
+                            <img src="assets/audit-alt-text.png" alt="Site checker image audit showing 624 images on a Conscious Chemist collection page, 67 missing alt text">
+                            <div class="caption">On-page checker: 624 images on one collection page, 67 without alt text - a pattern that scales with page complexity.</div>
+                        </div>
+                        <div class="evidence-shot">
+                            <img src="assets/audit-perplexity-niacinamide.png" alt="Perplexity answer for 'best niacinamide serum India' recommending Minimalist and The Derma Co, with no mention of Conscious Chemist">
+                            <div class="caption">Perplexity, "best niacinamide serum India": Conscious Chemist doesn't appear at all - Minimalist and The Derma Co do.</div>
+                        </div>
+                        <div class="evidence-shot">
+                            <img src="assets/audit-perplexity-reviews.png" alt="Perplexity answer for 'conscious chemist reviews' sourced entirely from Nykaa and Flipkart rather than the brand's own site">
+                            <div class="caption">Perplexity, "conscious chemist reviews": sourced from Nykaa and Flipkart, not consciouschemist.com - the brand has no controlled voice in its own AI-answer narrative.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="caveat">
+                    Findings and recommendations only - this was an audit, not an implementation.
+                    No fixes were deployed and no before/after results are claimed.
+                </p>
+            </div>
         </div>
     </main>
 
